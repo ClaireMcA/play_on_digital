@@ -7,8 +7,6 @@ module.exports = {
   ],
   theme: {
     colors: {
-
-
       'purple': '#864FA0',
       'orange': '#F47F52',
       'green': '#76B966',
@@ -22,11 +20,26 @@ module.exports = {
       'darkGrey': '#3B3B3F',
       'white': '#ffffff',
       'black': '#000000',
-
     },
     fontFamily: {
       sans: ['trade-gothic-next', 'sans-serif'],
       serif: ['thinkMusic', 'serif'],
+    },
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
     },
     extend: {
       backgroundImage: {
