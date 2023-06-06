@@ -9,7 +9,7 @@ import Selector from './Selector'
 export default function PlayerProfiles() {
   
   return (
-    <main className="bg-bgPurple items-center h-96 w-96">
+    <main className="bg-bgPurple items-center h-screen w-screen overflow-hidden">
       <Selector/>
 
     </main>

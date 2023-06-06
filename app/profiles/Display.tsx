@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FC } from 'react';
+import image from '/public/images/profiles/LydiaBlack.png';
 
 interface Props {
     imgName: string,
@@ -19,6 +20,10 @@ function Display (props:Props) {
         <>
             <div id={props.currentSlide}>
                     <div className="relative w-screen h-screen overflow-hidden">
+                    <a href={props.prevSlide}><img src="/images/arrow.png" className="absolute mt-96 ml-24 w-12 h-auto rotate-180"/></a>
+                    <a href={props.nextSlide}><img src="/images/arrow.png" className="absolute mt-96 mr-24 w-12 h-auto right-0"/></a>
+                   
+   
                         {/* <div className=" hiderLeft animateTest">
                          <a href={props.prevSlide}> <div id="arrowLeft"><img src="src/Assets/arrow.png" className="animateWide"/></div></a>
                         </div>
@@ -30,11 +35,11 @@ function Display (props:Props) {
                             <a href="#slide2"><div id="arrowRight"><img src="src/Assets/arrow.png" className="animateWide"/></div></a>
                         </div> */}
                          
-                        <h1 className="trade-gothic-next tracking-wider font-bold mt-12 text-5xl text-purple">{props.title}</h1>
+                        <h1 className="font-serif tracking-wider font-bold mt-12 text-5xl text-white">{props.title}</h1>
           
-                        <button className="trade-gothic-next relative border-white rounded-lg border-solid border-4 px-5 py-10 text-center cursor-pointer transition-all hover:bg-white hover:text-purple mt-8 text-3xl">Learn more about bananas {props.firstName}</button>
+                        <button className="font-sans relative text-white border-white rounded-lg border-solid border-4 px-5 py-10 text-center cursor-pointer transition-all hover:bg-white hover:text-purple mt-8 text-3xl">Learn more about {props.firstName}</button>
 
-                        <img className="w-auto h-96 bottom-0 absolute object-cover right-1/4 left-1/2 -ml-48 grayscale" src='/images/profiles/${props.imgName}.png'/>
+                        <div className="w-screen h-96 bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imgName}.png)` }}/>
                     </div>
                 </div>
         </>
