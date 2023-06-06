@@ -15,7 +15,6 @@ interface Props {
 function Display (props:Props) {
 
 
-
     return (
         <>
             <div id={props.currentSlide}>
