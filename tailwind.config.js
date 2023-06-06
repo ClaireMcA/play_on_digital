@@ -44,8 +44,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'bgPurple': 'linear-gradient(180deg, rgba(78,45,91,1) 0%, rgba(134,79,160,1) 75%, rgba(184,146,195,1) 100%)',
       },
     },
   },
