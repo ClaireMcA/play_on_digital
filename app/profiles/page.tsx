@@ -2,6 +2,8 @@
 
 import Selector from './Selector'
 
+import './profiles.css'
+
 export default function PlayerProfiles() {
   
   return (

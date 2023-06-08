@@ -65,9 +65,9 @@ color: #59595B;
 
 .bgLightBlueGradient{
   /* background-color: #20B6C9; */
-  background: linear-gradient(180deg, rgba(0,127,171,1) 0%, rgba(32,182,201,1) 30%, rgba(142,203,213,1) 100%);
-  /* background-size: 400% 400%; */
-  /* animation: gradient 15s 5s ease-in infinite; */
+  background: linear-gradient(180deg, rgba(0,127,171,1) 0%, rgba(32,182,201,1) 100%);
+  background-size: 400% 400%;
+  animation: gradient 15s 5s ease-in infinite;
 }
 
 .bgDarkGrey{
@@ -139,6 +139,7 @@ color: #59595B;
 .tileImageCont :hover{
   filter: grayscale(0%);
 }
+
 .grayscale{
   filter: grayscale(100%);
 }
