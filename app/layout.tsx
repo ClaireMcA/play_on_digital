@@ -16,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+        {children}
+      </body>
     </html>
   )
 }

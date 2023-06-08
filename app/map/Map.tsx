@@ -1,23 +1,26 @@
 import React, { useRef, useEffect, useState } from 'react';
+import * as data from './data';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from "mapbox-gl";
 
 
-interface Props {
-    vidNum: number,
-    exitClick: any;
-}
+// interface Props {
+//     vidNum: number,
+//     exitClick: any;
+// }
 
 
-export default function MapTest() {
+export default function Map() {
 
-    const mapContainer = useRef(null);
-    const map = useRef(null);
-    const [lng, setLng] = useState(149.1079);
-    const [lat, setLat] = useState(-35.321);
-    const [zoom, setZoom] = useState(10.2);
+    const logoImage = 'public/images/clubLogos/ADFAVikings.png'
 
+    const mapContainer = useRef<any>(null); // : Type
+    const map = useRef<mapboxgl.Map | null>(null);
+    const [lng, setLng] = useState<number>(149.1079);
+    const [lat, setLat] = useState<number>(-35.321);
+    const [zoom, setZoom] = useState<number>(10.2);
+    // console.log();
 
     useEffect(() => {
         if (map.current) return; // initialize map only once
@@ -29,289 +32,263 @@ export default function MapTest() {
             zoom: zoom
         });
 
-
-        // map.current.on('load', () => {
-        //     // Center the map on the coordinates of any clicked circle from the 'circle' layer.
-        //     map.current.on('click', 'circle', (e) => {
-        //         map.current.flyTo({
-        //         center: e.features[0].geometry.coordinates
-        //         });
-        //     });
-        // });
-
-
-
         map.current.on('load', () => {
-            map.current.addSource('places', {
-            // This GeoJSON contains features that include an "icon"
-            // property. The value of the "icon" property corresponds
-            // to an image in the Mapbox Streets style's sprite.
+            if (!map.current) return; 
+            
+
+            map.current.addSource('placeAreas', {
                 'type': 'geojson',
                 'data': {
-                    'type': 'FeatureCollection',
-                    'features': [
-                        {
-                            "type": "Feature",
-                            "properties": {
-                            "club": "wodenValley",
-                            "description": "Testing",
-                            "logo": "/public/images/clubLogos/wodenValley.jpeg"
-                            },
-                            "geometry": {
-                            "coordinates": [
-                                [
-                                [
-                                    149.095147,
-                                    -35.371723
-                                ],
-                                [
-                                    149.097508,
-                                    -35.371665
-                                ],
-                                [
-                                    149.096674,
-                                    -35.368265
-                                ],
-                                [
-                                    149.096221,
-                                    -35.368173
-                                ],
-                                [
-                                    149.09567,
-                                    -35.367884
-                                ],
-                                [
-                                    149.094963,
-                                    -35.367896
-                                ],
-                                [
-                                    149.094864,
-                                    -35.367642
-                                ],
-                                [
-                                    149.093635,
-                                    -35.367677
-                                ],
-                                [
-                                    149.09379,
-                                    -35.370213
-                                ],
-                                [
-                                    149.095147,
-                                    -35.370236
-                                ],
-                                [
-                                    149.095147,
-                                    -35.371723
-                                ]
-                                ]
-                            ],
-                            "type": "Polygon"
-                            }
-                        },
-                        {
-                            "type": "Feature",
-                            "properties": {
-                            "club": "canberraWhiteEagles",
-                            "description": "Testing",
-                            "logo": "/public/images/clubLogos/CanberraWhiteEagles.png"
-                            },
-                            "geometry": {
-                            "coordinates": [
-                                [
-                                [
-                                    149.096757,
-                                    -35.34487
-                                ],
-                                [
-                                    149.097639,
-                                    -35.344601
-                                ],
-                                [
-                                    149.098243,
-                                    -35.344224
-                                ],
-                                [
-                                    149.098924,
-                                    -35.346172
-                                ],
-                                [
-                                    149.099023,
-                                    -35.347204
-                                ],
-                                [
-                                    149.096945,
-                                    -35.34715
-                                ],
-                                [
-                                    149.096598,
-                                    -35.346977
-                                ],
-                                [
-                                    149.096995,
-                                    -35.345749
-                                ],
-                                [
-                                    149.096757,
-                                    -35.34487
-                                ]
-                                ]
-                            ],
-                            "type": "Polygon"
-                            }
-                        },
-                        {
-                            "type": "Feature",
-                            "properties": {
-                                "club": "southCanberra",
-                                "description": "Testing",
-                                "logo": "/public/images/clubLogos/southCanberra.jpeg"
-                            },
-                            "geometry": {
-                            "coordinates": [
-                                [
-                                [
-                                    149.147144,
-                                    -35.334601
-                                ],
-                                [
-                                    149.147447,
-                                    -35.33235
-                                ],
-                                [
-                                    149.146143,
-                                    -35.3322
-                                ],
-                                [
-                                    149.144879,
-                                    -35.332995
-                                ],
-                                [
-                                    149.144286,
-                                    -35.333924
-                                ],
-                                [
-                                    149.146011,
-                                    -35.334413
-                                ],
-                                [
-                                    149.147144,
-                                    -35.334601
-                                ]
-                                ]
-                            ],
-                            "type": "Polygon"
-                            }
-                        },
-                        {
-                            "type": "Feature",
-                            "properties": {
-                            "club": "westonMolongolo",
-                            "description": "Testing Values",
-                            "logo": "/public/images/clubLogos/westonMolongolo.png"
-                            },
-                            "geometry": {
-                            "coordinates": [
-                                [
-                                [
-                                    149.058179,
-                                    -35.353426
-                                ],
-                                [
-                                    149.056277,
-                                    -35.353471
-                                ],
-                                [
-                                    149.0564,
-                                    -35.355045
-                                ],
-                                [
-                                    149.056017,
-                                    -35.35529
-                                ],
-                                [
-                                    149.056045,
-                                    -35.356875
-                                ],
-                                [
-                                    149.056907,
-                                    -35.357556
-                                ],
-                                [
-                                    149.057468,
-                                    -35.357868
-                                ],
-                                [
-                                    149.058261,
-                                    -35.358136
-                                ],
-                                [
-                                    149.058398,
-                                    -35.357053
-                                ],
-                                [
-                                    149.058357,
-                                    -35.355525
-                                ],
-                                [
-                                    149.058179,
-                                    -35.353426
-                                ]
-                                ]
-                            ],
-                            "type": "Polygon"
-                            },
-                        }
-                    ]
+                  'type': 'FeatureCollection',
+                  'features': [
+                    {
+                      "geometry": {
+                        "coordinates": [[
+                          [
+                            149.0272720554314,
+                            -35.20564841892684
+                          ],
+                          [
+                            149.02932855426764,
+                            -35.20615251956121
+                          ],
+                          [
+                            149.03167296294373,
+                            -35.206690223454416
+                          ],
+                          [
+                            149.03393511166354,
+                            -35.20749677261768
+                          ],
+                          [
+                            149.0354569208028,
+                            -35.208404130850916
+                          ],
+                          [
+                            149.03652630019906,
+                            -35.20964753122191
+                          ],
+                          [
+                            149.0369787299444,
+                            -35.21129416727088
+                          ],
+                          [
+                            149.0374311596874,
+                            -35.213041581245854
+                          ],
+                          [
+                            149.03854166905944,
+                            -35.214486529776735
+                          ],
+                          [
+                            149.04018686812844,
+                            -35.215763439630585
+                          ],
+                          [
+                            149.0423256269209,
+                            -35.21720833971342
+                          ],
+                          [
+                            149.04318935643118,
+                            -35.21774597038788
+                          ],
+                          [
+                            149.0417909372216,
+                            -35.219090031494005
+                          ],
+                          [
+                            149.040598167898,
+                            -35.22023246593552
+                          ],
+                          [
+                            149.0396110484557,
+                            -35.22194608744617
+                          ],
+                          [
+                            149.0386239290134,
+                            -35.22335727799197
+                          ],
+                          [
+                            149.03763680957104,
+                            -35.22453325136867
+                          ],
+                          [
+                            149.03632065031542,
+                            -35.22560841211375
+                          ],
+                          [
+                            149.0350867510137,
+                            -35.22678435286776
+                          ],
+                          [
+                            149.03475771119804,
+                            -35.22748990913962
+                          ],
+                          [
+                            149.03303025217508,
+                            -35.22648196972962
+                          ],
+                          [
+                            149.03159070298977,
+                            -35.22493643831773
+                          ],
+                          [
+                            149.03072697347721,
+                            -35.22352527523187
+                          ],
+                          [
+                            149.0295753341294,
+                            -35.222349287249266
+                          ],
+                          [
+                            149.02805352499007,
+                            -35.221509285398824
+                          ],
+                          [
+                            149.02603815612963,
+                            -35.220635674252115
+                          ],
+                          [
+                            149.02389939733717,
+                            -35.21982925561584
+                          ],
+                          [
+                            149.02171950857127,
+                            -35.2192580375683
+                          ],
+                          [
+                            149.01999204954836,
+                            -35.219291638740465
+                          ],
+                          [
+                            149.01951203600845,
+                            -35.21939855021997
+                          ],
+                          [
+                            149.0193373995233,
+                            -35.217829173610006
+                          ],
+                          [
+                            149.01907544479798,
+                            -35.21675912670602
+                          ],
+                          [
+                            149.0194247177658,
+                            -35.2155820588184
+                          ],
+                          [
+                            149.02034155930664,
+                            -35.21472599872473
+                          ],
+                          [
+                            149.02169499206025,
+                            -35.21386992960333
+                          ],
+                          [
+                            149.02370331162956,
+                            -35.21322787183894
+                          ],
+                          [
+                            149.0250130852607,
+                            -35.21240745730472
+                          ],
+                          [
+                            149.02641017713444,
+                            -35.2110519716493
+                          ],
+                          [
+                            149.02689042746726,
+                            -35.2096251201943
+                          ],
+                          [
+                            149.02706506394998,
+                            -35.20794853769398
+                          ],
+                          [
+                            149.02684676834474,
+                            -35.20694970613168
+                          ],
+                          [
+                            149.0272720554314,
+                            -35.20564841892684
+                          ]
+                        ]],
+                        "type": "Polygon"
+                      },
+                      "type": "Feature",
+                      "properties": {
+                        "clubArea": "belwest",
+                      }
+                    }
+                  ]
                 }
             });
+    
+
+            // map.current.loadImage(
+            //     "/public/images/clubLogos/belwest.png",
+            //     function (error, image) {
+            //       if (error) throw error;
+            //       if (!map.current) return; 
+            //       map.current.addImage("custom-marker", );
+            //       // Add a GeoJSON source with multiple points
+            //       map.current.addSource('placePoints', {
+            //         'type': 'geojson',
+            //         'data': {
+            //           'type': 'FeatureCollection',
+            //           'features': [
+            //             {
+            //               "geometry": {
+            //                 "coordinates": [
+            //                   149.03511309237035,
+            //                   -35.21809222199347
+            //                 ],
+            //                 "type": "Point"
+            //               },
+            //               "type": "Feature",
+            //               "properties": {
+            //                 "club": "belwest",
+            //                 "desc": "Belwest Foxes is a community based volunteer run soccer club based in Latham ACT.",
+            //                 "logoImg": "belwest.png"
+            //               }
+            //             }
+            //           ]
+            //         }
+            //       });
+
             // Add a layer showing the places.
             map.current.addLayer({
-                'id': 'places',
+                'id': 'placeAreas',
                 'type': 'fill',
-                'source': 'places', // reference the data source
+                'source': 'placeAreas', // reference the data source
                 'layout': {},
                 'paint': {
                 'fill-color': '#FEC66A', // blue color fill
                 'fill-opacity': 0.7
-            // 'id': 'places',
-            // 'type': 'symbol',
-            // 'source': 'places',
-            // 'layout': {
-            // 'icon-image': ['get', 'icon'],
-            // 'icon-allow-overlap': true
+
             }
             });
-             
-            // // When a click event occurs on a feature in the places layer, open a popup at the
-            // // location of the feature, with description HTML from its properties.
-            // map.current.on('click', 'places', (e) => {
-            // // Copy coordinates array.
-            // const coordinates = e.features[0].geometry.coordinates.slice();
-            // const description = e.features[0].properties.description;
-             
-            // // Ensure that if the map is zoomed out such that multiple
-            // // copies of the feature are visible, the popup appears
-            // // over the copy being pointed to.
-            // while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            // coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-            // }
-             
-            // new mapboxgl.Popup()
-            // .setLngLat(coordinates)
-            // .setHTML(description)
-            // .addTo(map);
-            // });
-             
-            // // Change the cursor to a pointer when the mouse is over the places layer.
-            // map.current.on('mouseenter', 'places', () => {
-            // map.current.getCanvas().style.cursor = 'pointer';
-            // });
-             
-            // // Change it back to a pointer when it leaves.
-            // map.current.on('mouseleave', 'places', () => {
-            // map.current.getCanvas().style.cursor = '';
-            // });
+
+
+
+
+            
+
+            map.current.addLayer({
+                'id': 'placePoints',
+                'type': 'symbol',
+                'source': 'placePoints',
+                'layout': {
+                    'icon-image': ['get', 'icon'],
+                    'icon-allow-overlap': true
+                }
+            });
+
+
+
+
+
+
         });
     
 
@@ -326,16 +303,11 @@ export default function MapTest() {
     useEffect(() => {
         if (!map.current) return; // wait for map to initialize
         map.current.on('move', () => {
-            setLng(map.current.getCenter().lng.toFixed(4));
-            setLat(map.current.getCenter().lat.toFixed(4));
-            setZoom(map.current.getZoom().toFixed(2));
+            if (!map.current) return;
+            setLng(parseInt(map.current.getCenter().lng.toFixed(4)));
+            setLat(parseInt(map.current.getCenter().lat.toFixed(4)));
+            setZoom(parseInt(map.current.getZoom().toFixed(2)));
         });
-
-        
-
-
-
-
 
     });
 
