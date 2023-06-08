@@ -10,7 +10,7 @@ interface Props {
 export default function Selector(props:Props) {
 
     return (
-        <div className="#Slider text-center items-center h-screen w-screen mx-auto">
+        <div className="flex text-center items-center h-screen w-screen mx-auto">
         <Display 
             imgName = {"LydiaBlack"}
             currentSlide={"Slide1"}

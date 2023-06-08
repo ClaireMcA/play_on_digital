@@ -1,7 +1,6 @@
 'use client';
 
 import React, { FC } from 'react';
-import image from '/public/images/profiles/LydiaBlack.png';
 
 interface Props {
     imgName: string,
@@ -15,14 +14,14 @@ interface Props {
 
 function Display (props:Props) {
 
-
+   
     return (
         <>
-            <div id={props.currentSlide}>
+            <div id={props.currentSlide} className='snap-center snap-always flex flex-row'>
                     <div className="relative w-screen h-screen overflow-hidden">
-                    <a href={props.prevSlide}><img src="/images/arrow.png" className="absolute mt-96 ml-24 w-12 h-auto rotate-180"/></a>
-                    <a href={props.nextSlide}><img src="/images/arrow.png" className="absolute mt-96 mr-24 w-12 h-auto right-0"/></a>
-                   
+                        <a href={props.prevSlide}><img src="/images/arrow.png" className="absolute transition-all top-1/2 left-6 w-12 z-10 h-auto rotate-180"/></a>
+                        <a href={props.nextSlide}><img src="/images/arrow.png" className="absolute transition-all top-1/2 right-6 w-12 z-10 h-auto"/></a>
+                    
    
                         {/* <div className=" hiderLeft animateTest">
                          <a href={props.prevSlide}> <div id="arrowLeft"><img src="src/Assets/arrow.png" className="animateWide"/></div></a>
@@ -37,11 +36,11 @@ function Display (props:Props) {
                          
                         <h1 className="font-serif tracking-wider font-bold mt-12 text-5xl text-white">{props.title}</h1>
           
-                        <button className="font-sans relative text-white border-white rounded-lg border-solid border-4 px-5 py-10 text-center cursor-pointer transition-all hover:bg-white hover:text-purple mt-8 text-3xl">Learn more about {props.firstName}</button>
+                        <button className="font-sans font-extrabold relative text-white border-white rounded-lg border-solid border-2 px-3 py-6 text-center cursor-pointer transition-all hover:bg-white hover:text-purple mt-8 text-3xl">Learn more about {props.firstName}</button>
 
-                        <div className="w-screen h-96 bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imgName}.png)` }}/>
+                        <div className="w-screen z-0 h-[70vh] md:h-[65vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imgName}.png)` }}/>
                     </div>
-                </div>
+            </div>
         </>
     )
 }

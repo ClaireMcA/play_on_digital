@@ -2,14 +2,10 @@
 
 import Selector from './Selector'
 
-
-
-
-
 export default function PlayerProfiles() {
   
   return (
-    <main className="bg-bgPurple items-center h-screen w-screen overflow-hidden">
+    <main className="bg-bgPurple h-screen w-screen snap-mandatory snap-x overflow-y-hidden">
       <Selector/>
 
     </main>
