@@ -14,7 +14,7 @@ import mapboxgl from "mapbox-gl";
 export default function Map() {
 
     const logoImage = 'public/images/clubLogos/ADFAVikings.png'
-
+    const image = '';
     const mapContainer = useRef<any>(null); // : Type
     const map = useRef<mapboxgl.Map | null>(null);
     const [lng, setLng] = useState<number>(149.1079);
@@ -223,38 +223,42 @@ export default function Map() {
                   ]
                 }
             });
+
+            // map.current.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png', (error, image) => {
+            //     if (error) throw error;
+            //     if (!map.current) return; 
+            //     if (!map.current.hasImage('cat')) map.current.addImage('cat', image);
+            // });
     
 
             // map.current.loadImage(
-            //     "/public/images/clubLogos/belwest.png",
-            //     function (error, image) {
-            //       if (error) throw error;
-            //       if (!map.current) return; 
-            //       map.current.addImage("custom-marker", );
-            //       // Add a GeoJSON source with multiple points
-            //       map.current.addSource('placePoints', {
-            //         'type': 'geojson',
-            //         'data': {
-            //           'type': 'FeatureCollection',
-            //           'features': [
-            //             {
-            //               "geometry": {
-            //                 "coordinates": [
-            //                   149.03511309237035,
-            //                   -35.21809222199347
-            //                 ],
-            //                 "type": "Point"
-            //               },
-            //               "type": "Feature",
-            //               "properties": {
-            //                 "club": "belwest",
-            //                 "desc": "Belwest Foxes is a community based volunteer run soccer club based in Latham ACT.",
-            //                 "logoImg": "belwest.png"
-            //               }
+            //     "https://docs.mapbox.com/mapbox-gl-js/assets/cat.png",
+            //     (error, logoImage) => {
+            //         if (error) throw error;
+            //         if (!map.current) return; 
+            //         map.current.addImage("custom-marker", logoImage);
+            //         // Add a GeoJSON source with multiple points
+            //         map.current.addSource('placePoints', {
+            //             'type': 'geojson',
+            //             'data': {
+            //                 'type': 'FeatureCollection',
+            //                 'features': [{
+            //                     "geometry": {
+            //                         "coordinates": [
+            //                             149.03511309237035,
+            //                             -35.21809222199347
+            //                         ],
+            //                         "type": "Point"
+            //                     },
+            //                     "type": "Feature",
+            //                     "properties": {
+            //                         "club": "belwest",
+            //                         "desc": "Belwest Foxes is a community based volunteer run soccer club based in Latham ACT.",
+            //                         "logoImg": "belwest.png"
+            //                     }
+            //                 }]
             //             }
-            //           ]
-            //         }
-            //       });
+            //         });
 
             // Add a layer showing the places.
             map.current.addLayer({
@@ -263,16 +267,10 @@ export default function Map() {
                 'source': 'placeAreas', // reference the data source
                 'layout': {},
                 'paint': {
-                'fill-color': '#FEC66A', // blue color fill
-                'fill-opacity': 0.7
-
-            }
+                    'fill-color': '#FEC66A', // blue color fill
+                    'fill-opacity': 0.7
+                }
             });
-
-
-
-
-            
 
             map.current.addLayer({
                 'id': 'placePoints',

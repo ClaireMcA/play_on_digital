@@ -18,7 +18,7 @@ function Tile (props:Props) {
     return (
         <>
 
-            <button type="button" onClick={props.onClick} className="rounded-lg grayscale hover:grayscale-0 w-full h-full block bg-cover" style={{ backgroundImage: `url(/images/ACaffery${props.imgNum}.webp)` }}>
+            <button type="button" onClick={props.onClick} className="rounded-lg grayscale hover:grayscale-0 w-full h-full block bg-cover" style={{ backgroundImage: `url(/images/tiles/img${props.imgNum}.webp)` }}>
                 <div className="p-2 align-baseline" style={{ backgroundColor: "rgb(31, 41, 55, 0.7)" }}>
                 <h5 className="text-white title">{props.title}</h5>
                 <p className="secondaryTitle text-white">{props.subtitle}</p>

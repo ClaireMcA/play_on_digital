@@ -1,6 +1,6 @@
 
 import Display from "./Display"
-import React from "react"
+import React, {useState} from "react"
 
 
 interface Props {
@@ -8,9 +8,13 @@ interface Props {
 }
 
 export default function Selector(props:Props) {
+    const [currSlide, setCurrSlide] = useState<number>(1);
 
     return (
         <div className="flex text-center items-center h-screen w-screen mx-auto">
+        <a href={'#Slide'+ (currSlide-1) } onClick={() => setCurrSlide(currSlide-1)}><img src="/images/arrow.png" id="arrowLeft" className="absolute select-none top-1/2 left-6 md:left-12 xl:left-24 w-12 z-10 h-auto rotate-180"/></a>
+        <a href={'#Slide'+ (currSlide+1) } onClick={() => setCurrSlide(currSlide+1)}><img src="/images/arrow.png" id="arrowReft" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a>
+
         <Display 
             imgName = {"LydiaBlack"}
             currentSlide={"Slide1"}
