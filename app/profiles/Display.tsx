@@ -22,13 +22,13 @@ function Display (props:Props) {
                     <div className="relative w-screen h-screen overflow-hidden">
                                    
                         <a href={props.prevSlide}><img src="/images/arrow.png" id="arrowLeft" className="absolute select-none top-1/2 left-6 md:left-12 xl:left-24 w-12 z-10 h-auto rotate-180"/></a>
-                        <a href={props.nextSlide}><img src="/images/arrow.png" id="arrowReft" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a>
+                        <a href={props.nextSlide}><img src="/images/arrow.png" id="arrowRight" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a>
 
-                        <div className="w-1/4 overflow-hidden right-0 absolute h-full animateTest">
-                            <div id="circle"><img src="/images/circle.png" className="absolute select-none 4 w-12 z-10 h-auto"/></div>
-                            <div id="dashLeft"><img src="/images/dash.png" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></div>
-                            <div id="dashMiddle"><img src="/images/dash.png" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></div>
-                            <div id="dashRight"><img src="/images/dash.png" className=" absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></div>
+                        <div className="w-1/3 lg:w-2/12 overflow-hidden top-1/2 right-6 md:right-12 xl:right-24 absolute h-full animateTest">
+                            <div id="circle"><img src="/images/circle.png" className="select-none w-12 z-10 h-auto"/></div>
+                            <div id="dashLeft"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto"/></div>
+                            <div id="dashMiddle"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto"/></div>
+                            <div id="dashRight"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto"/></div>
                         </div>
                          
                         <h1 className="font-serif tracking-wider font-bold mt-12 text-5xl text-white">{props.title}</h1>
