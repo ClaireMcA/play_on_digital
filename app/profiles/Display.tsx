@@ -24,11 +24,11 @@ function Display (props:Props) {
                         {/* <a href={props.prevSlide}><img src="/images/arrow.png" id="arrowLeft" className="absolute select-none top-1/2 left-6 md:left-12 xl:left-24 w-12 z-10 h-auto rotate-180"/></a>
                         <a href={props.nextSlide}><img src="/images/arrow.png" id="arrowReft" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a> */}
 
-                        <div className="w-1/3 lg:w-2/12 overflow-hidden top-1/2 right-6 md:right-12 xl:right-24 absolute h-full animateTest">
-                            <div id="circle"><img src="/images/circle.png" className="select-none w-12 z-10 h-auto"/></div>
-                            <div id="dashLeft"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto"/></div>
-                            <div id="dashMiddle"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto"/></div>
-                            <div id="dashRight"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto"/></div>
+                        <div className="w-1/3 md:w-2/12 overflow-hidden top-1/2 right-6 md:right-12 xl:right-24 absolute h-full animateTest">
+                            <div id="circle" className="right-72"><img src="/images/circle.png" className="select-none w-12 right-72 z-10 h-auto"/></div>
+                            <div id="dashLeft" className="right-56"><img src="/images/dash.png" className="select-none w-12 right-56 z-10 h-auto"/></div>
+                            <div id="dashMiddle" className="right-40"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto"/></div>
+                            <div id="dashRight" className="right-24"><img src="/images/dash.png" className="select-none  w-12 right-3 z-10 h-auto"/></div>
                         </div>
                          
                         <h1 className="font-serif tracking-wider font-bold mt-12 text-5xl text-white">{props.title}</h1>
