@@ -21,8 +21,8 @@ function Display (props:Props) {
             <div id={props.currentSlide} className='snap-center snap-always flex flex-row'>
                     <div className="relative w-screen h-screen overflow-hidden">
                                    
-                        <a href={props.prevSlide}><img src="/images/arrow.png" id="arrowLeft" className="absolute select-none top-1/2 left-6 md:left-12 xl:left-24 w-12 z-10 h-auto rotate-180"/></a>
-                        <a href={props.nextSlide}><img src="/images/arrow.png" id="arrowReft" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a>
+                        {/* <a href={props.prevSlide}><img src="/images/arrow.png" id="arrowLeft" className="absolute select-none top-1/2 left-6 md:left-12 xl:left-24 w-12 z-10 h-auto rotate-180"/></a>
+                        <a href={props.nextSlide}><img src="/images/arrow.png" id="arrowReft" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a> */}
 
                         <div className="w-1/4 overflow-hidden right-0 absolute h-full animateTest">
                             <div id="circle"><img src="/images/circle.png" className="absolute select-none 4 w-12 z-10 h-auto"/></div>
