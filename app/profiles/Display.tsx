@@ -36,11 +36,8 @@ function Display (props:Props) {
           
                     
                         <a className='group' href={'/profiles/details#'+ (props.learnLink) }> 
-                        <span className="inline-flex items-center justify-center w-16 h-16 mr-2 transition-colors duration-150 bg-white rounded-full group-hover:w-96 group-hover:shadow-2xl group-hover:shadow-white group-hover:bg-opacity-0">
-                          <p className="text-white hidden text-lg font-sans group-hover:inline-flex">Learn more about {props.firstName}</p>
-                          <img src="/images/arrowPurple.png" className="h-auto w-4 rotate-90 group-hover:hidden"/>
+                          <p className="text-white hidden text-lg font-sans group-hover:inline-flex">Select Player</p>
                           <img src="/images/arrow.png" className="h-auto w-4 rotate-90 hidden group-hover:block group-hover:w-8 group-hover:h-auto group-hover:transition-transform group-hover:duration-150"/>
-                        </span>
                         </a>
                 
 {/*                             
