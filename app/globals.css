@@ -70,6 +70,13 @@ color: #59595B;
   animation: gradient 15s 5s ease-in infinite;
 }
 
+.bgPinkGradient{
+  /* background-color: #20B6C9; */
+  background: linear-gradient(180deg, rgba(119,0,84, 1) 0%, rgba(222,47,144,1) 100%, );
+  background-size: 400% 400%;
+  animation: gradient 15s 5s ease-in infinite;
+}
+
 .bgDarkGrey{
   background-color: #3B3B3F;
   background: linear-gradient(90deg, rgba(111,111,113,1) 0%, rgba(89,89,91,1) 35%, rgba(59,59,63,1) 100%);
