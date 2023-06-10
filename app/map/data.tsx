@@ -4,6 +4,13 @@ export const placePoints = {
     'type': 'FeatureCollection',
     'features': [
       {
+        "id": 1,
+        "type": "Feature",
+        "properties": {
+          "club": "Belwest",
+          "desc": "Belwest Foxes is a community based volunteer run soccer club based in Latham ACT.",
+          "logoImg": "belwest.png",
+        },
         "geometry": {
           "coordinates": [
             149.03511309237035,
@@ -11,11 +18,85 @@ export const placePoints = {
           ],
           "type": "Point"
         },
+      },
+      {
+        "id": 2,
         "type": "Feature",
         "properties": {
-          "club": "belwest",
-          "desc": "Belwest Foxes is a community based volunteer run soccer club based in Latham ACT.",
-          "logoImg": "belwest.png"
+          "club": "O'Connor Knights",
+          "desc": "THis is o COnnor Knights!",
+          "logoImg": "oConnorKnights.png"
+        },
+        "geometry": {
+          "coordinates": [
+            149.037361,
+            -35.242052
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "id": 3,
+        "type": "Feature",
+        "properties": {
+          "club": "Belsouth",
+          "desc": "This is Belsouth!",
+          "logoImg": "belsouth.png"
+        },
+        "geometry": {
+          "coordinates": [
+            149.035945,
+            -35.246753
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "id": 4,
+        "type": "Feature",
+        "properties": {
+          "club": "Belnorth",
+          "desc": "This is Belnorth!",
+          "logoImg": "belnorth.png"
+        },
+        "geometry": {
+          "coordinates": [
+            149.105254,
+            -35.226447
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "id": 5,
+        "type": "Feature",
+        "properties": {
+          "club": "Canberra City",
+          "desc": "Canberrqa City play here at the GIO Stadium",
+          "logoImg": "canberraCity.png"
+        },
+        "geometry": {
+          "coordinates": [
+            149.102635,
+            -35.250015
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "id": 6,
+        "type": "Feature",
+        "properties": {
+          "club": "Majura",
+          "desc": "Majura!",
+          "logoImg": "majura.png"
+        },
+        "geometry": {
+          "coordinates": [
+            149.149113,
+            -35.24933
+          ],
+          "type": "Point"
         }
       }
     ]

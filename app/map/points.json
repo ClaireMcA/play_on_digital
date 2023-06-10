@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+        "geometry": {
+            "coordinates": [
+                149.035113,
+                -35.218092
+              ],
+            "type": "Point"
+        },
+        "type": "Feature",
+        "properties": {
+            "club": "belwest",
+            "desc": "Belwest Foxes is a community based volunteer run soccer club based in Latham ACT.",
+            "logoImg": "belwest.png",
+            "message": "foo"
+        }
+        }
+    ]
+}
