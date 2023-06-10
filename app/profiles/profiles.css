@@ -1,68 +1,61 @@
+/* Hiding scrollbar for all profile pages */
+main::-webkit-scrollbar{
+  display: none !important;
+}
 
-.animateTest #arrowLeft{
-    animation: slide-left 4s forwards;
-    /* animation-delay: 0.5s; */
-    transform: translate3d(-800%, 0, 0);
-    opacity: 1;
-  }
-  
-  .animateTest #arrowRight{
-    transform: translate3d(-800%, 0, 0);
-    opacity: 1;
-    animation: slide-right 4s forwards;
-  }
-  .animateTest #dashRight{
-    transform: translate3d(-800%, 0, 0);
-    animation: slide-right 12s, fadeOut 1s forwards ;
-    animation-delay: 0s, 8s;
-    opacity: 1;
+ .animateTest #dashRight{
+    transform: translate3d(-80%, 0, 0);
+    animation: fadeIn 1s forwards, slide-right forwards 6s, fadeOut 1s forwards  ;
+    animation-delay: 4s, 4s, 12s;
+    opacity: 0;
   }
   .animateTest #dashMiddle{
-    transform: translate3d(-800%, 0, 0);
-    animation: slide-right 12s, fadeOut 1s forwards  ;
-    animation-delay: 1s, 8s;
+    transform: translate3d(-80%, 0, 0);
+    animation: fadeIn 1s forwards, slide-right forwards 6s, fadeOut 1s forwards  ;
+    animation-delay: 3s, 3s, 12s;
+    opacity: 0;
   }
   .animateTest #dashLeft{
-    transform: translate3d(-800%, 0, 0);
-    animation: slide-rightWoops 12s, fadeOut 1s forwards  ;
-    animation-delay: 2s, 8s;
+    transform: translate3d(-80%, 0, 0);
+    animation: fadeIn 1s forwards, slide-right forwards 6s, fadeOut 1s forwards  ;
+    animation-delay: 2s, 2s, 12s;
+    opacity: 0;
   }
+
+  .animateTest #dashFarLeft{
+    transform: translate3d(-80%, 0, 0);
+    animation: fadeIn 1s forwards, slide-right forwards 6s, fadeOut 1s forwards  ;
+    animation-delay: 1s, 1s, 12s;
+    opacity: 0;
+  }
+
   .animateTest #circle{
-    transform: translate3d(-800%, 0, 0);
-    animation: slide-right 12s, fadeOut 1s forwards  ;
-    animation-delay: 2.5s, 8s;
+    animation: fadeIn 1s forwards, fadeOut 1s forwards  ;
+    animation-delay: 0s, 12s;
   }
   
   #dashRight{  
-    right: 100px;
     position: absolute;
   }
+
   #dashMiddle{  
-    right: 160px;
     position: absolute;
   }
+
   #dashLeft{  
-    right: 220px;
+    position: absolute;
+  }
+
+  #dashFarLeft{  
     position: absolute;
   }
   
   #circle{  
-    right: 280px;
     position: absolute;
   }
 
 .hiderRight {
   transform: translate3d(0,0,0);
-}
-
-.hiderLeft {
-  position: absolute;
-  left: 50px;
-  top: 0%;
-  transform: translate3d(0,0,0);
-  overflow: hidden;
-  height: 50vh;
-  width: 400px;
 }
 
 @keyframes fadeOut{
@@ -75,20 +68,20 @@
 }
 
 @keyframes slide-left { 
-  0%{ transform: translate3d(-800%, 0, 0);}
+  0%{ transform: translate3d(-80%, 0, 0);}
   25%{ transform: translate3d(0%, 0, 0);}
   100%{ transform: translate3d(0%, 0, 0);}
 }
 
 @keyframes slide-right { 
-  0%{ transform: translate3d(-800%, 0, 0);}
+  0%{ transform: translate3d(-80%, 0, 0);}
   25%{ transform: translate3d(100%, 0, 0);}
   100%{ transform: translate3d(100%, 0, 0);}
 }
-@keyframes slide-rightWoops { 
-  0%{ transform: translate3d(-800%, 0, 0);}
-  19%{ transform: translate3d(120%, 0, 0);}
-  20%{ transform: translate3d(80%, 0, 0);}
+@keyframes slide-rightWhoops { 
+  0%{ transform: translate3d(-80%, 0, 0);}
+  19%{ transform: translate3d(110%, 0, 0);}
+  22%{ transform: translate3d(90%, 0, 0);}
   25%{ transform: translate3d(100%, 0, 0);}
   100%{ transform: translate3d(100%, 0, 0);}
 }
