@@ -17,7 +17,7 @@ export default function Home() {
             subtitle = {"Take a look at womens football clubs in Canberra!"}
           />
           <Option 
-            link = "/profile"
+            link = "/profiles"
             imgNum = {1}
             title = {"Player Profiles"}
             subtitle = {"Find out more about some important Aussie Players!"}
