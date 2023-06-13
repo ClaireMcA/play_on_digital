@@ -9,30 +9,9 @@ interface Props {
 
 export default function Selector(props:Props) {
     const [currSlide, setCurrSlide] = useState<number>(1);
-    
-    // const [touchStart, setTouchStart] = useState(null)
-    // const [touchEnd, setTouchEnd] = useState(null)
 
-    // // the required distance between touchStart and touchEnd to be detected as a swipe
-    // const minSwipeDistance = 50 
-
-    // const onTouchStart = (e) => {
-    // setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
-    // setTouchStart(e.targetTouches[0].clientX)
-    // }
-
-    // const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX)
-
-    // const onTouchEnd = () => {
-    // if (!touchStart || !touchEnd) return
-    // const distance = touchStart - touchEnd
-    // const isLeftSwipe = distance > minSwipeDistance
-    // const isRightSwipe = distance < -minSwipeDistance
-    // if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
-    // add your conditional logic here
 
     return (
-        // <div className="flex text-center items-center h-screen w-screen mx-auto" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}></div>
         <div className="flex text-center items-center h-screen w-screen mx-auto">
       
         <a onClick={() => {if (currSlide <= 1) {setCurrSlide(5)} else {setCurrSlide(currSlide-1); }}} href={'#Slide'+ (currSlide) } ><img src="/images/arrow.png" id="arrowLeft" className="absolute select-none top-1/2 left-6 md:left-12 xl:left-24 w-12 z-10 h-auto rotate-180"/></a>
@@ -45,6 +24,7 @@ export default function Selector(props:Props) {
             nextSlide={"#Slide2"}
             title = {"Lydia Williams"}
             firstName = {"Lydia"}
+            lastName = {"Williams"}
             learnLink = {"#LydiaWilliams"}
             />
             <Display
@@ -54,17 +34,18 @@ export default function Selector(props:Props) {
             nextSlide={"#Slide3"}
             title = {"Ellie Carpenter"}
             firstName = {"Ellie"}
+            lastName = {"Carpenter"}
             learnLink = {"EllieCarpenter"}
             />
 
             <Display 
-
             imgName = {"SamKerr"}
             currentSlide={"Slide3"}            
             prevSlide={"#Slide2"}
             nextSlide={"#Slide4"}
             title = {"Sam Kerr"}
             firstName = {"Sam"}
+            lastName = {"Kerr"}
             learnLink = {"SamKerr"}
             />
 
@@ -75,17 +56,18 @@ export default function Selector(props:Props) {
             nextSlide={"#Slide5"}
             title = {"Michelle Heyman"}
             firstName = {"Michelle"}
+            lastName = {"Heyman"}
             learnLink = {"MichelleHeyman"}
             />
 
             <Display 
-
             imgName = {"HayleyRaso"}
             currentSlide={"Slide5"}            
             prevSlide={"#Slide4"}
             nextSlide={"#Slide1"}
             title = {"Hayley Raso"}
             firstName = {"Hayley"}
+            lastName = {"Raso"}
             learnLink = {"HayleyRaso"}
             />
         </div>
