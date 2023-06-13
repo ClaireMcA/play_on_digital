@@ -34,7 +34,7 @@ function Display (props:Props) {
                         </div>
                          
                         <h1 className="font-serif tracking-wider mt-[10vh] text-6xl md:text-8xl lg:text-9xl text-white">{props.firstName}<span className='font-sans font-extrabold'> {props.lastName}</span></h1>
-                        <a className='group' href={'/profiles/details#'+ (props.learnLink) }> 
+                        <a className='group z-20' href={'/profiles/details#'+ (props.learnLink) }> 
                             <div className="w-[20vw] mx-auto border-solid border-4 text-white border-white rounded-lg font-extrabold text-center text-xl font-sans group-hover:bg-white group-hover:text-purple">
                                 <p className="relative ">Select Player</p>
                             </div>

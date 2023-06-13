@@ -23,7 +23,7 @@ export default function Home() {
             subtitle = {"Find out more about some important Aussie Players!"}
           />
           <Option 
-            link = "/timeline"
+            link = "https://playonexhibition.netlify.app/timeline.html"
             imgNum = {1}
             title = {"Timeline"}
             subtitle = {"Explore womens football clubs in Canberra through the years!"}
