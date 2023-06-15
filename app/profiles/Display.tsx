@@ -7,6 +7,7 @@ interface Props {
     imgName: string,
     title: string,
     firstName: string,
+    lastName: string,
     prevSlide: string,
     currentSlide: string,
     nextSlide: string,
@@ -32,14 +33,12 @@ function Display (props:Props) {
                             <div id="dashRight" className="right-24"><img src="/images/dash.png" className="select-none  w-12 z-10 h-auto"/></div>
                         </div>
                          
-                        <h1 className="font-serif tracking-wider font-bold mt-[15vh] text-6xl md:text-8xl lg:text-9xl text-white">{props.title}</h1>
-          
-                    
-                        <a className='group' href={'/profiles/details#'+ (props.learnLink) }> 
-                          <p className="text-white hidden text-lg font-sans group-hover:inline-flex">Select Player</p>
-                          <img src="/images/arrow.png" className="h-auto w-4 rotate-90 hidden group-hover:block group-hover:w-8 group-hover:h-auto group-hover:transition-transform group-hover:duration-150"/>
+                        <h1 className="font-serif tracking-wider mt-[10vh] text-6xl md:text-8xl lg:text-9xl text-white">{props.firstName}<span className='font-sans font-extrabold'> {props.lastName}</span></h1>
+                        <a className='group z-20' href={'/profiles/details#'+ (props.learnLink) }> 
+                            <div className="w-[20vw] mx-auto border-solid border-4 text-white border-white rounded-lg font-extrabold text-center text-xl font-sans group-hover:bg-white group-hover:text-purple">
+                                <p className="relative ">Select Player</p>
+                            </div>
                         </a>
-                
 {/*                             
                         {/* <button className="font-sans font-extrabold relative text-white border-white rounded-lg border-solid border-2 px-3 py-6 text-center cursor-pointer transition-all hover:bg-white hover:text-purple mt-8 text-3xl">Learn more about {props.firstName}</button> */}
 

@@ -10,6 +10,7 @@ interface Props {
 export default function Selector(props:Props) {
     const [currSlide, setCurrSlide] = useState<number>(1);
 
+
     return (
         <div className="flex text-center items-center h-screen w-screen mx-auto">
       
@@ -23,6 +24,7 @@ export default function Selector(props:Props) {
             nextSlide={"#Slide2"}
             title = {"Lydia Williams"}
             firstName = {"Lydia"}
+            lastName = {"Williams"}
             learnLink = {"#LydiaWilliams"}
             />
             <Display
@@ -32,17 +34,18 @@ export default function Selector(props:Props) {
             nextSlide={"#Slide3"}
             title = {"Ellie Carpenter"}
             firstName = {"Ellie"}
+            lastName = {"Carpenter"}
             learnLink = {"EllieCarpenter"}
             />
 
             <Display 
-
             imgName = {"SamKerr"}
             currentSlide={"Slide3"}            
             prevSlide={"#Slide2"}
             nextSlide={"#Slide4"}
             title = {"Sam Kerr"}
             firstName = {"Sam"}
+            lastName = {"Kerr"}
             learnLink = {"SamKerr"}
             />
 
@@ -53,17 +56,18 @@ export default function Selector(props:Props) {
             nextSlide={"#Slide5"}
             title = {"Michelle Heyman"}
             firstName = {"Michelle"}
+            lastName = {"Heyman"}
             learnLink = {"MichelleHeyman"}
             />
 
             <Display 
-
             imgName = {"HayleyRaso"}
             currentSlide={"Slide5"}            
             prevSlide={"#Slide4"}
             nextSlide={"#Slide1"}
             title = {"Hayley Raso"}
             firstName = {"Hayley"}
+            lastName = {"Raso"}
             learnLink = {"HayleyRaso"}
             />
         </div>
