@@ -1,78 +1,104 @@
-import React, { useState } from 'react';
+import React, {useRef} from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import mapboxgl from "mapbox-gl";
-import Map, { Marker, Source, Layer } from 'react-map-gl';
-import { placePoints } from './data';
-
+// import mapboxgl from "mapbox-gl";
+import Map, { Marker, Source, Layer, FillLayer, MapLayerMouseEvent, MapRef, MapboxStyle } from 'react-map-gl';
+import { placePoints, placeAreas } from './data';
+import bbox from '@turf/bbox';
+import MAP_STYLE from './mapStyle';
 
 interface Props {
   clubClicked: any
 }
 
-const layerStyle = {
-  id: 'point',
-  type: 'fill',
-  paint: {
-    'fill-color': '#4E3FC8'
-  }
-};
+
+// const dataLayer: FillLayer = {
+//   id: 'data',
+//   type: 'fill',
+//   paint: {
+//     'fill-color': ['get', 'color'],
+//     // 'fill-color': '#4E3FC8',
+//     'fill-opacity': 0.4
+//   },
+// };
+
+// const fillLayer: FillLayer = {
+//   id: 'sf-neighborhoods-fill',
+//   source: 'sf-neighborhoods',
+//   type: 'fill',
+//   paint: {
+//     'fill-outline-color': '#0040c8',
+//     'fill-color': '#fff',
+//     'fill-opacity': 0
+//   }
+// };
 
 
-export default function MapView({clubClicked}: Props) {
+export default function MapView({ clubClicked }: Props) {
+  const mapRef = useRef<MapRef>();
+
+  const onClick = (event: MapLayerMouseEvent) => {
+    // if (!event) return;
+    console.log(event);
+    // const feature = event.features[0];
+    // if (feature) {
+    //   // calculate the bounding box of the feature
+    //   const [minLng, minLat, maxLng, maxLat] = bbox(feature);
+
+    //   if (!mapRef.current) return;
+    //   mapRef.current.fitBounds(
+    //     [
+    //       [minLng, minLat],
+    //       [maxLng, maxLat]
+    //     ],
+    //     {padding: 40, duration: 1000}
+    //   );
+    // }
+  };
 
 
-  // const handleClick = (id: number) => {
-  //   // setcurrentClub(placePoints.features[num]);
-  //   console.log(placePoints.features[id - 1]);
-  // }
 
-    // const logoImage = 'public/images/clubLogos/belwest.png'
-    // const mapContainer = useRef<any>(null); // : Type
-    // const map = useRef<mapboxgl.Map | null>(null);
-    // const [lng, setLng] = useState<number>(149.1079);
-    // const [lat, setLat] = useState<number>(-35.321);
-    // const [zoom, setZoom] = useState<number>(10.2);
 
-    // const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN
-
-// console.log(process.env.MAPBOX_TOKEN)
-
-    return (
-      <div className="map-container place-self-center h-screen w-full">
+  return (
+    <div className="map-container place-self-center h-screen w-full">
       <Map
-      
+        ref={mapRef}
         initialViewState={{
           longitude: 149.1079,
           latitude: -35.321,
-          zoom: 10.2
+          zoom: 10.2,
         }}
-        // style={{width: 600, height: 400}}
-        mapStyle="mapbox://styles/nugmc7/clih0drh7001301pwhkw07bzo"
-        // mapboxAccessToken={process.env.MAPBOX_TOKEN}
-        mapboxAccessToken='pk.eyJ1IjoibnVnbWM3IiwiYSI6ImNrdXFwMmE0bTR4bDgydW84MTczMzJ4bnQifQ.ELNGQu9bmwasNHuVUZT96w'
+        // mapStyle="mapbox://styles/nugmc7/clih0drh7001301pwhkw07bzo"
+        mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
+        interactiveLayerIds={['clubAreas-fill']}
+        onClick={onClick}
+        mapStyle={MAP_STYLE as MapboxStyle}
       >
-      {/* <Marker longitude={149.1079} latitude={-35.321} color="red" /> */}
+        {placePoints.features.map((club) => (
+          <Marker
+            key={club.id}
+            longitude={club.geometry.coordinates[0]}
+            latitude={club.geometry.coordinates[1]}
+            onClick={() => clubClicked(club.id)}
+            // icon-scale={ ["*", ["interpolate", ["exponential", 2], ["zoom"]], ]}
+          >
+            <img
+              className="h-8 w-8"
+              src={"/images/clubLogos/" + club.properties.logoImg}
+            />
+          </Marker>
+        ))}
 
-
-      {placePoints.features.map(club => (
-        <Marker key={club.id}
-          longitude={club.geometry.coordinates[0]}
-          latitude={club.geometry.coordinates[1]}
-          onClick= {() => clubClicked(club.id)}>
-
-
-          <img className="h-8 w-8" src={'/images/clubLogos/' + club.properties.logoImg}/>  
-        </Marker>)
-      )}
-
-    {/* <Source id="my-data" type="geojson" data={placeAreas}>
-      <Layer {...layerStyle} />
-    </Source> */}
-
-
+        {/* <Source
+          id="my-data"
+          type="geojson"
+          data={'/dataFiles/pointAreas.geojson'}
+          
+        >
+          <Layer {...dataLayer} />
+        </Source> */}
       </Map>
-      </div>
-    );
+    </div>
+  );
 }
 
 

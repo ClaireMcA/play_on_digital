@@ -8,7 +8,21 @@ import { placePoints } from './data';
 
 export default function MapPage() {
 
-  const [currentClub, setcurrentClub]: null | any = useState(placePoints.features[0]);
+  const defaultFeature = {
+    type: 'point',
+    properties: {
+        club: 'Select a Club',
+        field: '',
+        desc: '',
+        logoImg: 'belwest.png'
+    },
+    geometry: {
+        coordinates: [],
+        type: 'string'
+    }
+  }
+
+  const [currentClub, setcurrentClub]: null | any = useState(defaultFeature);
   // console.log(currentClub)
 
 
@@ -22,7 +36,7 @@ export default function MapPage() {
       <MapView clubClicked={(id:number) => handleClick(id)}/>
       <Club
         club = {currentClub.properties.club}
-        ground = {"Latham Playing Fields"}
+        field = {currentClub.properties.field}
         desc = { currentClub.properties.desc}
         img = {currentClub.properties.logoImg}
         // club = "Belwest"

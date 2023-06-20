@@ -71,7 +71,7 @@ color: #59595B;
 }
 
 .bgPinkGradient{
-  /* background-color: #20B6C9; */
+  background-color: rgba(222,47,144,1);
   background: linear-gradient(180deg, rgba(119,0,84, 1) 0%, rgba(222,47,144,1) 100%, );
   background-size: 400% 400%;
   animation: gradient 15s 5s ease-in infinite;

@@ -8,6 +8,7 @@ export const placePoints = {
         "type": "Feature",
         "properties": {
           "club": "Belwest",
+          "field": "Latham Playing Fields",
           "desc": "Belwest Foxes is a community based volunteer run soccer club based in Latham ACT.",
           "logoImg": "belwest.png",
         },
@@ -24,6 +25,7 @@ export const placePoints = {
         "type": "Feature",
         "properties": {
           "club": "O'Connor Knights",
+          "field": "Hawker Football Center",
           "desc": "THis is o COnnor Knights!",
           "logoImg": "oConnorKnights.png"
         },
@@ -40,6 +42,7 @@ export const placePoints = {
         "type": "Feature",
         "properties": {
           "club": "Belsouth",
+          "field": "Hawker Playing Fields",
           "desc": "This is Belsouth!",
           "logoImg": "belsouth.png"
         },
@@ -56,6 +59,7 @@ export const placePoints = {
         "type": "Feature",
         "properties": {
           "club": "Belnorth",
+          "field": "Kaleen Playing Fields",
           "desc": "This is Belnorth!",
           "logoImg": "belnorth.png"
         },
@@ -72,6 +76,7 @@ export const placePoints = {
         "type": "Feature",
         "properties": {
           "club": "Canberra City",
+          "field": "GIO Stadium",
           "desc": "Canberrqa City play here at the GIO Stadium",
           "logoImg": "canberraCity.png"
         },
@@ -277,14 +282,83 @@ export const placePoints = {
               -35.20564841892684
             ]
           ]],
-          "type": "Polygon"
+          "type": "MultiPolygon"
         },
         "type": "Feature",
         "properties": {
           "clubArea": "belwest",
+        }
+      },
+      {
+        "geometry": {
+          "coordinates": [
+            [
+              [
+                149.04079648824512,
+                -35.23885882095814
+              ],
+              [
+                149.0502602729424,
+                -35.236023066824785
+              ],
+              [
+                149.06000405127082,
+                -35.239133243516406
+              ],
+              [
+                149.05686812261354,
+                -35.24818866700322
+              ],
+              [
+                149.04242045130098,
+                -35.24626790409832
+              ],
+              [
+                149.04079648824512,
+                -35.23885882095814
+              ]
+            ]
+          ],
+          "type": "MultiPolygon"
+        },
+        "type": "Feature",
+        "properties": {
+          "clubArea": "test",
         }
       }
     ]
   }
 
 
+export const testPlaces = {
+  'type': 'geojson',
+  'data': {
+    'type': 'Feature',
+    'geometry': {
+      'type': 'Polygon',
+      // These coordinates outline Maine.
+      'coordinates': [[
+        [-67.13734, 45.13745],
+        [-66.96466, 44.8097],
+        [-68.03252, 44.3252],
+        [-69.06, 43.98],
+        [-70.11617, 43.68405],
+        [-70.64573, 43.09008],
+        [-70.75102, 43.08003],
+        [-70.79761, 43.21973],
+        [-70.98176, 43.36789],
+        [-70.94416, 43.46633],
+        [-71.08482, 45.30524],
+        [-70.66002, 45.46022],
+        [-70.30495, 45.91479],
+        [-70.00014, 46.69317],
+        [-69.23708, 47.44777],
+        [-68.90478, 47.18479],
+        [-68.2343, 47.35462],
+        [-67.79035, 47.06624],
+        [-67.79141, 45.70258],
+        [-67.13734, 45.13745]
+      ]]
+    }
+  }
+}

@@ -32,7 +32,7 @@ export default function VideoTiles() {
   }
   
   return (
-    <main className="items-center bgLightBlueGradient">
+    <main className="items-center bgPinkGradient">
       {vidIsShown && <Player exitClick={() => handleExit()} vidNum={playVidNum}/>}
 
       {!vidIsShown && <Grid onClick={(num:number) => handleClick(num)}/>}
