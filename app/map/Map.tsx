@@ -34,7 +34,7 @@ interface Props {
 
 
 export default function MapView({ clubClicked }: Props) {
-  const mapRef = useRef<MapRef>();
+  // const mapRef = useRef<MapRef>();
 
   const onClick = (event: MapLayerMouseEvent) => {
     // if (!event) return;
@@ -61,7 +61,7 @@ export default function MapView({ clubClicked }: Props) {
   return (
     <div className="map-container place-self-center h-screen w-full">
       <Map
-        ref={mapRef}
+        // ref={mapRef}
         initialViewState={{
           longitude: 149.1079,
           latitude: -35.321,
