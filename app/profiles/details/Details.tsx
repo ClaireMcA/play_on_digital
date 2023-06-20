@@ -13,6 +13,15 @@ export default function Selector(props:Props) {
         <div className="flex text-center items-center h-screen w-screen mx-auto">
 
         <LearnMore 
+            firstName = {playerDetails.players[0].properties.firstName}
+            lastName = {playerDetails.players[0].properties.lastName}
+            onField={playerDetails.players[0].properties.onField}
+            onField2={playerDetails.players[0].properties.onField2}
+            offField={playerDetails.players[0].properties.offField}
+            returnSlide={playerDetails.players[0].properties.returnSlide}
+        />
+
+        <LearnMore 
             firstName = {"Lydia"}
             lastName = {"Williams"}
             onField={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, elit vel condimentum dictum, massa velit vehicula risus, a faucibus odio augue vel ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, elit vel condimentum dictum, massa velit vehicula risus, a faucibus odio augue vel ipsum."}
