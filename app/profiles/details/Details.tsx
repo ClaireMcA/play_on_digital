@@ -1,5 +1,6 @@
 import LearnMore from "./LearnMore";
 import React, {useState} from "react"
+import { playerDetails } from '../data';
 
 
 interface Props {

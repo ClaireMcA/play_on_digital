@@ -2,6 +2,7 @@
 
 import React, { FC } from 'react';
 import './profiles.css'
+import { playerDetails } from './data';
 
 interface Props {
     firstName: string,
