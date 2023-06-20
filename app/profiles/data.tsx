@@ -1,10 +1,7 @@
 export const playerDetails = {
-    'type': 'PlayerCollection',
     'players': [
       {
-        "id": 1,
-        "type": "Player",
-        "properties": {
+          "id": 1,
           "firstName": "Lydia",
           "lastName": "Williams",
           "prevSlide": 5,
@@ -15,12 +12,9 @@ export const playerDetails = {
           "offField": "Lydia Off Field",
           "returnSlide":1,
         },
-      },
 
       {
-      "id": 2,
-      "type": "Player",
-      "properties": {
+        "id": 2,
         "firstName": "Ellie",
         "lastName": "Carpenter",
         "prevSlide": 1,
@@ -31,11 +25,9 @@ export const playerDetails = {
         "offField": "Ellie Off Field",
         "returnSlide":2,
       },
-    },
+
     {
-        "id": 3,
-        "type": "Player",
-        "properties": {
+          "id": 3,
           "firstName": "Sam",
           "lastName": "Kerr",
           "prevSlide": 2,
@@ -46,11 +38,9 @@ export const playerDetails = {
           "offField": "Sam Off Field",
           "returnSlide":3,
         },
-      },
+  
       {
-        "id": 4,
-        "type": "Player",
-        "properties": {
+          "id": 4,
           "firstName": "Michelle",
           "lastName": "Heyman",
           "prevSlide": 3,
@@ -61,11 +51,9 @@ export const playerDetails = {
           "offField": "Michelle Off Field",
           "returnSlide":4,
         },
-      },
+
       {
-        "id": 5,
-        "type": "Player",
-        "properties": {
+          "id": 5,
           "firstName": "Hayley",
           "lastName": "Raso",
           "prevSlide": 4,
@@ -76,7 +64,4 @@ export const playerDetails = {
           "offField": "Hayley Off Field",
           "returnSlide":5,
         },
-      },
-
-
 ]}

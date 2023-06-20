@@ -13,57 +13,48 @@ export default function Selector(props:Props) {
         <div className="flex text-center items-center h-screen w-screen mx-auto">
 
         <LearnMore 
-            firstName = {playerDetails.players[0].properties.firstName}
-            lastName = {playerDetails.players[0].properties.lastName}
-            onField={playerDetails.players[0].properties.onField}
-            onField2={playerDetails.players[0].properties.onField2}
-            offField={playerDetails.players[0].properties.offField}
-            returnSlide={playerDetails.players[0].properties.returnSlide}
+            firstName = {playerDetails.players[0].firstName}
+            lastName = {playerDetails.players[0].lastName}
+            onField={playerDetails.players[0].onField}
+            onField2={playerDetails.players[0].onField2}
+            offField={playerDetails.players[0].offField}
+            returnSlide={playerDetails.players[0].returnSlide}
         />
 
         <LearnMore 
-            firstName = {"Lydia"}
-            lastName = {"Williams"}
-            onField={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, elit vel condimentum dictum, massa velit vehicula risus, a faucibus odio augue vel ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, elit vel condimentum dictum, massa velit vehicula risus, a faucibus odio augue vel ipsum."}
-            onField2={"Lorem ipsum dolor sit amet, consectetur ipiscing elit. Sed imperdiet, elit velad condimentum dictum, massa velit vehicula risus, a faucibus odio augue vel ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, elit vel condimentum dictum, massa velit vehicula risus, a faucibus odio augue vel ipsum."}
-            offField={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat vel sapien faucibus ultrices. Sed in nisl sit amet urna consectetur maximus. Praesent at iaculis enim. Integer at neque feugiat, fermentum ipsum vel, tincidunt libero. Mauris mollis porta scelerisque. Aenean felis elit, convallis in luctus id, faucibus vitae odio. Donec vel eros diam. Phasellus fermentum augue eget fermentum fringilla. Donec accumsan bibendum purus non ullamcorper. Proin porta tincidunt cursus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur id nulla augue. Nam ac tortor sit amet risus ultrices suscipit. Nunc lorem orci, pulvinar eu scelerisque in, facilisis et nisl. Etiam hendrerit suscipit magna ac elementum. Proin faucibus eget quam eget hendrerit. Ut scelerisque sagittis erat, in rhoncus eros sodales a. Maecenas vel elit magna."}
-            returnSlide={1}
+            firstName = {playerDetails.players[1].firstName}
+            lastName = {playerDetails.players[1].lastName}
+            onField={playerDetails.players[1].onField}
+            onField2={playerDetails.players[1].onField2}
+            offField={playerDetails.players[1].offField}
+            returnSlide={playerDetails.players[1].returnSlide}
             />
 
         <LearnMore 
-            firstName = {"Ellie"}
-            lastName = {"Carpenter"}
-            onField={"on Field Ellie"}
-            onField2={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, elit vel condimentum dictum, massa velit vehicula risus, a faucibus odio augue vel ipsum."}
-            offField={"off Field Ellie"}
-            returnSlide={2}
+            firstName = {playerDetails.players[2].firstName}
+            lastName = {playerDetails.players[2].lastName}
+            onField={playerDetails.players[2].onField}
+            onField2={playerDetails.players[2].onField2}
+            offField={playerDetails.players[2].offField}
+            returnSlide={playerDetails.players[2].returnSlide}
             />
 
         <LearnMore 
-            firstName = {"Sam"}
-            lastName = {"Kerr"}
-            onField={"on Field Sam"}
-            onField2={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, elit vel condimentum dictum, massa velit vehicula risus, a faucibus odio augue vel ipsum."}
-            offField={"off Field Sam"}
-            returnSlide={3}
+            firstName = {playerDetails.players[3].firstName}
+            lastName = {playerDetails.players[3].lastName}
+            onField={playerDetails.players[3].onField}
+            onField2={playerDetails.players[3].onField2}
+            offField={playerDetails.players[3].offField}
+            returnSlide={playerDetails.players[3].returnSlide}
             />
 
         <LearnMore 
-            firstName = {"Michelle"}
-            lastName = {"Heyman"}
-            onField={"on Field Michelle"}
-            onField2={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, elit vel condimentum dictum, massa velit vehicula risus, a faucibus odio augue vel ipsum."}
-            offField={"off Field Michelle"}
-            returnSlide={4}
-            />
-
-        <LearnMore 
-            firstName = {"Hayley"}
-            lastName = {"Raso"}
-            onField={"on Field Hayley"}
-            onField2={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, elit vel condimentum dictum, massa velit vehicula risus, a faucibus odio augue vel ipsum."}
-            offField={"off Field Hayley"}
-            returnSlide={5}
+            firstName = {playerDetails.players[4].firstName}
+            lastName = {playerDetails.players[4].lastName}
+            onField={playerDetails.players[4].onField}
+            onField2={playerDetails.players[4].onField2}
+            offField={playerDetails.players[4].offField}
+            returnSlide={playerDetails.players[4].returnSlide}
             />
 
         </div>
