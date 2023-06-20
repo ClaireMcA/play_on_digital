@@ -87,6 +87,7 @@ export default function MapView({ clubClicked }: Props) {
             />
           </Marker>
         ))}
+        
 
         {/* <Source
           id="my-data"
