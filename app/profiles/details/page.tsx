@@ -5,7 +5,7 @@ import Details from './Details'
 export default function ProfileDetails() {
   
   return (
-    <main className="bg-bgPurple h-screen w-screen overflow-y-hidden">
+    <main className="bg-bgPink h-screen w-screen overflow-hidden">
       
       <Details/>
     </main>

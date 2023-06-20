@@ -15,60 +15,46 @@ export default function Selector(props:Props) {
         <div className="flex text-center items-center h-screen w-screen mx-auto">
       
         <a onClick={() => {if (currSlide <= 1) {setCurrSlide(5)} else {setCurrSlide(currSlide-1); }}} href={'#Slide'+ (currSlide) } ><img src="/images/arrow.png" id="arrowLeft" className="absolute select-none top-1/2 left-6 md:left-12 xl:left-24 w-12 z-10 h-auto rotate-180"/></a>
-        <a onClick={() => {if (currSlide >= 5) {setCurrSlide(1)} else {setCurrSlide(currSlide+1); }}} href={'#Slide'+ (currSlide) } ><img src="/images/arrow.png" id="arrowReft" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a>
+        <a onClick={() => {if (currSlide >= 5) {setCurrSlide(1)} else {setCurrSlide(currSlide+1); }}} href={'#Slide'+ (currSlide) } ><img src="/images/arrow.png" id="arrowRight" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a>
 
         <Display 
-            imgName = {"LydiaBlack"}
+            firstName = {"Lydia"}
+            lastName = {"Williams"}
             currentSlide={"Slide1"}
             prevSlide={"#Slide5"}
             nextSlide={"#Slide2"}
-            title = {"Lydia Williams"}
-            firstName = {"Lydia"}
-            lastName = {"Williams"}
-            learnLink = {"#LydiaWilliams"}
             />
+
             <Display
-            imgName = {"EllieCarpenter"}
+            firstName = {"Ellie"}
+            lastName = {"Carpenter"}
             currentSlide={"Slide2"}            
             prevSlide={"#Slide1"}
             nextSlide={"#Slide3"}
-            title = {"Ellie Carpenter"}
-            firstName = {"Ellie"}
-            lastName = {"Carpenter"}
-            learnLink = {"EllieCarpenter"}
             />
 
             <Display 
-            imgName = {"SamKerr"}
+            firstName = {"Sam"}
+            lastName = {"Kerr"}
             currentSlide={"Slide3"}            
             prevSlide={"#Slide2"}
             nextSlide={"#Slide4"}
-            title = {"Sam Kerr"}
-            firstName = {"Sam"}
-            lastName = {"Kerr"}
-            learnLink = {"SamKerr"}
             />
 
             <Display
-            imgName = {"MichelleHeyman"}
+            firstName = {"Michelle"}
+            lastName = {"Heyman"}        
             currentSlide={"Slide4"}            
             prevSlide={"#Slide3"}
             nextSlide={"#Slide5"}
-            title = {"Michelle Heyman"}
-            firstName = {"Michelle"}
-            lastName = {"Heyman"}
-            learnLink = {"MichelleHeyman"}
             />
 
             <Display 
-            imgName = {"HayleyRaso"}
+            firstName = {"Hayley"}
+            lastName = {"Raso"}
             currentSlide={"Slide5"}            
             prevSlide={"#Slide4"}
             nextSlide={"#Slide1"}
-            title = {"Hayley Raso"}
-            firstName = {"Hayley"}
-            lastName = {"Raso"}
-            learnLink = {"HayleyRaso"}
             />
         </div>
 

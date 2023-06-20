@@ -8,7 +8,7 @@ import './profiles.css'
 export default function PlayerProfiles() {
   
   return (
-    <main className="bg-bgPurple h-screen w-screen snap-mandatory snap-x overflow-y-hidden">
+    <main className="bg-bgPink h-screen w-screen snap-mandatory snap-x overflow-y-hidden">
       <Selector/>
 
     </main>
