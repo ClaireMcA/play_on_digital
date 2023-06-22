@@ -37,10 +37,23 @@ function Display(props: Props) {
 
                     {/* <a href={props.prevSlide}><img src="/images/arrow.png" id="arrowLeft" className="absolute select-none top-1/2 left-6 md:left-12 xl:left-24 w-12 z-10 h-auto rotate-180"/></a>
                         <a href={props.nextSlide}><img src="/images/arrow.png" id="arrowRight" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a> */}
+                    
                     <Controls 
                     currentSlide={playerDetails.players[0].currentSlide}
                      />
-
+                    <Controls 
+                    currentSlide={playerDetails.players[1].currentSlide}
+                     />
+                    <Controls 
+                    currentSlide={playerDetails.players[2].currentSlide}
+                     />
+                    <Controls 
+                    currentSlide={playerDetails.players[3].currentSlide}
+                     />
+                    <Controls 
+                    currentSlide={playerDetails.players[4].currentSlide}
+                     />
+            
                     <div className="w-screen top-1/2 right-6 md:right-12 xl:right-24 absolute h-full animateTest">
                         <div id="circle" className="right-[19rem]"><img src="/images/circle.png" className="select-none w-12 z-10 h-auto" /></div>
                         <div id="dashFarLeft" className="right-72"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto" /></div>

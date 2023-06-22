@@ -56,6 +56,7 @@ export default function Selector(props:Props) {
           prevSlide={playerDetails.players[0].prevSlide}
           nextSlide={playerDetails.players[0].nextSlide}
         />
+        
 
         <Display
           firstName={playerDetails.players[1].firstName}
