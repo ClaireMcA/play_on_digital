@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC } from 'react';
+import React, { FC, MouseEventHandler } from 'react';
 import { useState } from 'react';
 import './profiles.css'
 import { playerDetails } from './data';
@@ -36,6 +36,20 @@ function Display (props:Props) {
     const [name, setName] = useState<string>("");
     
 
+    const onClick: MouseEventHandler = () => {
+        
+        if (currSlide == 1) {
+            setName(name1)
+        } else if (currSlide == 2) {
+            setName(name2)
+        } else if (currSlide == 3) {
+            setName(name3)
+        } else if (currSlide == 4) {
+            setName(name4)
+        } else {setName(name5); }
+    }
+
+
    
     return (
         <>
@@ -54,11 +68,11 @@ function Display (props:Props) {
                         <a href={props.nextSlide}><img src="/images/arrow.png" id="arrowRight" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a> */}
 
                         <span className="inline-grid grid-cols-5 mt-4 gap-4 text-white font-sans font-extrabold">
-                            <a onLoad={() => {if (currSlide == 1) {setName(name1)} else if (currSlide == 2) {setName(name2)} else if (currSlide == 3) {setName(name3)} else if (currSlide == 4) {setName(name4)} else {setName(name5); }}} href='#Slide1' className="hover:underline">{name}</a>
-                            <a onLoad={() => {if (currSlide == 1) {setName(name1)} else if (currSlide == 2) {setName(name2)} else if (currSlide == 3) {setName(name3)} else if (currSlide == 4) {setName(name4)} else {setName(name5); }}} href='#Slide2' className="hover:underline">{name}</a>
-                            <a onLoad={() => {if (currSlide == 1) {setName(name1)} else if (currSlide == 2) {setName(name2)} else if (currSlide == 3) {setName(name3)} else if (currSlide == 4) {setName(name4)} else {setName(name5); }}} href='#Slide3' className="hover:underline">{name}</a>
-                            <a onLoad={() => {if (currSlide == 1) {setName(name1)} else if (currSlide == 2) {setName(name2)} else if (currSlide == 3) {setName(name3)} else if (currSlide == 4) {setName(name4)} else {setName(name5); }}} href='#Slide4' className="hover:underline">{name}</a>
-                            <a onLoad={() => {if (currSlide == 1) {setName(name1)} else if (currSlide == 2) {setName(name2)} else if (currSlide == 3) {setName(name3)} else if (currSlide == 4) {setName(name4)} else {setName(name5); }}} href='#Slide5' className="hover:underline">{name}</a>
+                            <a onClick={() => {onClick}} href='#Slide1' className="hover:underline">{name1}</a>
+                            <a onClick={() => {onClick}} href='#Slide2' className="hover:underline">{name2}</a>
+                            <a onClick={() => {onClick}} href='#Slide3' className="hover:underline">{name3}</a>
+                            <a onClick={() => {onClick}} href='#Slide4' className="hover:underline">{name4}</a>
+                            <a onClick={() => {onClick}} href='#Slide5' className="hover:underline">{name5}</a>
                         </span>
 
                         <div className="w-screen top-1/2 right-6 md:right-12 xl:right-24 absolute h-full animateTest">
