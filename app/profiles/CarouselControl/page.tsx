@@ -3,16 +3,14 @@ import React, { FC, MouseEventHandler, useState } from 'react';
 import classNames from 'classnames';
 import { playerDetails } from '../data';
 import '../profiles.css'
-import Selector from '../Selector';
     
 
 interface Props {
-
+    currentSlide: string,
 }
 
-export default function Controls () {
+export default function Controls (props: Props) {
 
-    <Selector />
     const name1 = playerDetails.players[0].firstName
     const name2 = playerDetails.players[1].firstName
     const name3 = playerDetails.players[2].firstName
@@ -24,10 +22,8 @@ export default function Controls () {
 
     const [name, setName] = useState<string>("");
 
-
-
     const onClick: MouseEventHandler = () => {
-   
+        const currSlide = props.currentSlide;
         if (currSlide == "Slide1") {
             setName(name1), setActive((current) => !current), console.log(name1)
         } else if (currSlide == "Slide2") {
