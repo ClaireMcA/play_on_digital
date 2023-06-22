@@ -9,7 +9,7 @@ interface Props {
     currentSlide: string,
 }
 
-export default function Controls () {
+export default function Controls(props: Props) {
 
     const name1 = playerDetails.players[0].firstName
     const name2 = playerDetails.players[1].firstName
@@ -17,22 +17,38 @@ export default function Controls () {
     const name4 = playerDetails.players[3].firstName
     const name5 = playerDetails.players[4].firstName
     const [currSlide, setCurrSlide] = useState<number>(1);
+    
     const [active, setActive] = useState(false)
+
+    // const handleToggle = () => {
+     
+    //   if (currSlide == 1) {
+    //     setName(name1), setActive((current) => !current)
+    // } else if (currSlide == 2) {
+    //     setName(name2)
+    // } else if (currSlide == 3) {
+    //     setName(name3), setActive((current) => !current)
+    // } else if (currSlide == 4) {
+    //     setName(name4)
+    // } else { setName(name5), setActive((current) => !current); }
+    // };
+
+
 
     const [name, setName] = useState<string>("");
 
     const onClick: MouseEventHandler = () => {
 
-        if (currSlide == 1) {
-            setName(name1), setActive(true)
-        } else if (currSlide == 2) {
-            setName(name2)
-        } else if (currSlide == 3) {
-            setName(name3)
-        } else if (currSlide == 4) {
-            setName(name4)
-        } else { setName(name5); }
-    }
+        // if (currSlide == 1) {
+        //     setName(name1); console.log(name1); setActive((current) => !current)
+        // } else if (currSlide == 2) {
+        //     setName(name1); console.log(name2)
+        // } else if (currSlide == 3) {
+        //     setName(name1); setActive((current) => !current); console.log(name3)
+        // } else if (currSlide == 4) {
+        //     setName(name1); console.log(name4)
+        // } else { setName(name5); setActive((current) => !current); console.log(name5); }
+        };
 
 
 	return (
@@ -43,15 +59,16 @@ export default function Controls () {
             <a onClick={() => { onClick ;  }} href='#Slide4' className="">{name4}</a>
             <a onClick={() => { onClick ; }} href='#Slide5' className="">{name5}</a>
         
-                <div
+                {/* <div
                     className={classNames({
                         controls: true,
                         active: active,
                 })}
                 >
                     <p>This is a test!!</p>
-                </div>
-                
+                </div> */}
+                {/* <button onClick={handleToggle}>Show name</button>
+                {active && <p>Coding Beauty</p>} */}
         </span>
 
 	);
