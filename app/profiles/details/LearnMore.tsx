@@ -7,9 +7,12 @@ import { playerDetails } from '../data';
 interface Props {    
     firstName: string,
     lastName: string,
-    onField: string,
-    onField2: string,
-    offField: string,
+    leftButton: string,
+    rightButton: string,
+    leftText: string,
+    leftText2: string,
+    rightText: string,
+    rightText2: string,
     returnSlide: number
 }
 
@@ -40,9 +43,9 @@ function LearnMore (props:Props) {
                         {/* Hidden Field Boxes */}
                         <div className="z-30 flex">
                        
-                           {/* Box 1 - On the Field */}
+                           {/* Box 1 - Left Content */}
                             <div className="flex-col mt-12 w-2/3 relative font-sans mx-auto overflow-hidden ">
-                                <label className="grow px-4 py-3 absolute mt-2 w-36 inset-x-0 mx-auto title text-white border-white border-2 rounded-full fancyUnderlineCenter" htmlFor={'collapse'+ (props.firstName + props.lastName) }>On the Field</label>
+                                <label className="grow px-4 py-3 absolute mt-2 w-36 inset-x-0 mx-auto title text-white border-white border-2 rounded-full fancyUnderlineCenter" htmlFor={'collapse'+ (props.firstName + props.lastName) }>{props.leftButton}</label>
                                 
                                 {/* when on another player, the buttons are opening the boxes on the Lydia page because they all render as the one page... need to add a new prop for collapsing per playter */}
                                 <input className="peer mx-4 my-3 h-0 w-0 appearance-none border text-slate-800 accent-slate-600 opacity-0" type="checkbox" name={'collapse'+ (props.firstName + props.lastName) } id={'collapse'+ (props.firstName + props.lastName) } />
@@ -51,16 +54,16 @@ function LearnMore (props:Props) {
                                 scale-y-0 px-4 py-3 opacity-0 transition-all duration-200 peer-checked:relative peer-checked:translate-y-0 peer-checked:scale-100 peer-checked:scale-y-100
                                 peer-checked:opacity-80">
                                 
-                                    <p className='px-4 py-2 text-darkGrey'>{props.onField}</p>
-                                    <p className='px-4 py-2 text-darkGrey mt-4'>{props.onField2}</p>
+                                    <p className='px-4 py-2 text-darkGrey'>{props.leftText}</p>
+                                    <p className='px-4 py-2 text-darkGrey mt-4'>{props.leftText2}</p>
                                 
                                 </div>
                             </div>
 
 
-                            {/* Box 2 - Off the Field */}
+                            {/* Box 2 - Right Content */}
                             <div className="flex-col mt-36 font-sans relative w-2/3 h-auto mx-auto overflow-hidden">
-                                <label className="grow px-4 py-3 absolute mt-2 w-36 inset-x-0 mx-auto title text-white border-white border-2 rounded-full fancyUnderlineCenter" htmlFor={'collapse2'+ (props.firstName + props.lastName) }>Off the Field</label>
+                                <label className="grow px-4 py-3 absolute mt-2 w-36 inset-x-0 mx-auto title text-white border-white border-2 rounded-full fancyUnderlineCenter" htmlFor={'collapse2'+ (props.firstName + props.lastName) }>{props.rightButton}</label>
                                 
                                 <input className="bg-white peer mx-4 my-3 h-0 w-0 appearance-none rounded border text-slate-800 accent-slate-600 opacity-0" type="checkbox" name={'collapse2'+ (props.firstName + props.lastName) } id={'collapse2'+ (props.firstName + props.lastName) } />
                             
@@ -69,7 +72,8 @@ function LearnMore (props:Props) {
                                 peer-checked:opacity-80">
                                 
                                 
-                                    <p className='text-darkGrey'>{props.offField}</p>
+                                    <p className='px-4 py-2 text-darkGrey'>{props.rightText}</p>
+                                    <p className='px-4 py-2 text-darkGrey mt-4'>{props.rightText2}</p>
                                 
                                 </div>
                             </div>
