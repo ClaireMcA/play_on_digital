@@ -9,6 +9,7 @@ import { playerDetails } from './data'
 interface Props {
     firstName: string,
     lastName: string,
+    imageName: string,
     prevSlide: string,
     currentSlide: number,
     nextSlide: string,
@@ -26,7 +27,7 @@ function Display(props: Props) {
 
             <div id={"Slide"+props.currentSlide} className='snap-center snap-always scroll-mx-3 flex flex-row'>
                 <div className="relative w-screen h-screen overflow-hidden">
-             <p className='font-sans mt-4 text-white'>Slide {props.currentSlide} of 5</p>
+             <p className=' absolute top-12 right-[5vw] font-sans mt-4 text-white'>Slide {props.currentSlide} of 5</p>
                     <div className="w-screen flex flex-row justify-center">
                         <img className="z-0 absolute inset-y-0 top-1/2 h-auto w-[60vw] mx-auto rotate-[10deg]"
                             src="images/SVG/BrushWhite.svg">
@@ -51,7 +52,7 @@ function Display(props: Props) {
                             <p className="relative ">Select Player</p>
                         </div>
                     </a>
-                    <div className="w-screen z-0 h-[70vh] md:h-[65vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.firstName + props.lastName}.png)` }} />
+                    <div className="w-screen z-0 h-[70vh] md:h-[65vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
                 </div>
             </div>
         </>

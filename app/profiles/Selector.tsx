@@ -49,6 +49,7 @@ export default function Selector(props:Props) {
         <Display
           firstName={playerDetails.players[0].firstName}
           lastName={playerDetails.players[0].lastName}
+          imageName={playerDetails.players[0].imageName}
           currentSlide={playerDetails.players[0].currentSlide}
           prevSlide={playerDetails.players[0].prevSlide}
           nextSlide={playerDetails.players[0].nextSlide}
@@ -58,6 +59,7 @@ export default function Selector(props:Props) {
         <Display
           firstName={playerDetails.players[1].firstName}
           lastName={playerDetails.players[1].lastName}
+          imageName={playerDetails.players[1].imageName}
           currentSlide={playerDetails.players[1].currentSlide}
           prevSlide={playerDetails.players[1].prevSlide}
           nextSlide={playerDetails.players[1].nextSlide}
@@ -66,6 +68,7 @@ export default function Selector(props:Props) {
         <Display
           firstName={playerDetails.players[2].firstName}
           lastName={playerDetails.players[2].lastName}
+          imageName={playerDetails.players[2].imageName}
           currentSlide={playerDetails.players[2].currentSlide}
           prevSlide={playerDetails.players[2].prevSlide}
           nextSlide={playerDetails.players[2].nextSlide}
@@ -74,6 +77,7 @@ export default function Selector(props:Props) {
         <Display
           firstName={playerDetails.players[3].firstName}
           lastName={playerDetails.players[3].lastName}
+          imageName={playerDetails.players[3].imageName}
           currentSlide={playerDetails.players[3].currentSlide}
           prevSlide={playerDetails.players[3].prevSlide}
           nextSlide={playerDetails.players[3].nextSlide}
@@ -82,6 +86,7 @@ export default function Selector(props:Props) {
         <Display
           firstName={playerDetails.players[4].firstName}
           lastName={playerDetails.players[4].lastName}
+          imageName={playerDetails.players[4].imageName}
           currentSlide={playerDetails.players[4].currentSlide}
           prevSlide={playerDetails.players[4].prevSlide}
           nextSlide={playerDetails.players[4].nextSlide}
