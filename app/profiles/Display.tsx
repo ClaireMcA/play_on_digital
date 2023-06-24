@@ -3,16 +3,14 @@
 import React, { FC, MouseEventHandler } from 'react';
 import { useState } from 'react';
 import './profiles.css'
-import { playerDetails } from './data';
-import Controls from './CarouselControl/page';
-
+import { playerDetails } from './data'
 
 
 interface Props {
     firstName: string,
     lastName: string,
     prevSlide: string,
-    currentSlide: string,
+    currentSlide: number,
     nextSlide: string,
 }
 
@@ -26,9 +24,9 @@ function Display(props: Props) {
     return (
         <>
 
-            <div id={props.currentSlide} className='snap-center snap-always scroll-mx-3 flex flex-row'>
+            <div id={"Slide"+props.currentSlide} className='snap-center snap-always scroll-mx-3 flex flex-row'>
                 <div className="relative w-screen h-screen overflow-hidden">
-
+             <p className='font-sans mt-4 text-white'>Slide {props.currentSlide} of 5</p>
                     <div className="w-screen flex flex-row justify-center">
                         <img className="z-0 absolute inset-y-0 top-1/2 h-auto w-[60vw] mx-auto rotate-[10deg]"
                             src="images/SVG/BrushWhite.svg">
@@ -37,22 +35,6 @@ function Display(props: Props) {
 
                     {/* <a href={props.prevSlide}><img src="/images/arrow.png" id="arrowLeft" className="absolute select-none top-1/2 left-6 md:left-12 xl:left-24 w-12 z-10 h-auto rotate-180"/></a>
                         <a href={props.nextSlide}><img src="/images/arrow.png" id="arrowRight" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a> */}
-                    
-                    <Controls 
-                    currentSlide={playerDetails.players[0].currentSlide}
-                     />
-                    <Controls 
-                    currentSlide={playerDetails.players[1].currentSlide}
-                     />
-                    <Controls 
-                    currentSlide={playerDetails.players[2].currentSlide}
-                     />
-                    <Controls 
-                    currentSlide={playerDetails.players[3].currentSlide}
-                     />
-                    <Controls 
-                    currentSlide={playerDetails.players[4].currentSlide}
-                     />
             
                     <div className="w-screen top-1/2 right-6 md:right-12 xl:right-24 absolute h-full animateTest">
                         <div id="circle" className="right-[19rem]"><img src="/images/circle.png" className="select-none w-12 z-10 h-auto" /></div>

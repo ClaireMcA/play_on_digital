@@ -1,11 +1,3 @@
-.controls{
-  color: lightblue;
-  
-}
-
-.active{
-  text-decoration: underline;
-}
 
 /* Hiding scrollbar for all profile pages */
 main::-webkit-scrollbar{

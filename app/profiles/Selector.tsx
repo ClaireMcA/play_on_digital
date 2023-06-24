@@ -2,9 +2,6 @@
 import Display from "./Display"
 import React, {useState} from "react"
 import { playerDetails } from './data';
-import Controls from "./CarouselControl/page"
-
-
 
 interface Props {
 
