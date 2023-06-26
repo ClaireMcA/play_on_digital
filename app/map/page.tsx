@@ -49,7 +49,7 @@ export default function MapPage() {
       <MapView clubClicked={(e: MapLayerMouseEvent) => handleClick(e)}/>
       <Club
         club = {currentClub.properties.club}
-        field = {currentClub.properties.field}
+        field = {currentClub.properties.ground}
         desc = { currentClub.properties.desc}
         img = {currentClub.properties.logoImg}
         // club = "Belwest"

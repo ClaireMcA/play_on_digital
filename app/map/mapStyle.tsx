@@ -12,7 +12,7 @@ const fillLayer: FillLayer = {
   source: 'clubAreas',
   type: 'fill',
   paint: {
-    'fill-color': ['get', 'color'],
+    'fill-color': ['get', 'colour'],
     // 'fill-color': '#4E3FC8',
     'fill-opacity': 0.4
   },
