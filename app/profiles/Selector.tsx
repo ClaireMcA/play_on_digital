@@ -53,6 +53,11 @@ export default function Selector(props:Props) {
           currentSlide={playerDetails.players[0].currentSlide}
           prevSlide={playerDetails.players[0].prevSlide}
           nextSlide={playerDetails.players[0].nextSlide}
+          name1={playerDetails.players[0].name1}
+          name2={playerDetails.players[0].name2}
+          name3={playerDetails.players[0].name3}
+          name4={playerDetails.players[0].name4}
+          name5={playerDetails.players[0].name5}
         />
         
 
@@ -63,6 +68,11 @@ export default function Selector(props:Props) {
           currentSlide={playerDetails.players[1].currentSlide}
           prevSlide={playerDetails.players[1].prevSlide}
           nextSlide={playerDetails.players[1].nextSlide}
+          name1={playerDetails.players[1].name1}
+          name2={playerDetails.players[1].name2}
+          name3={playerDetails.players[1].name3}
+          name4={playerDetails.players[1].name4}
+          name5={playerDetails.players[1].name5}
         />
 
         <Display
@@ -72,6 +82,11 @@ export default function Selector(props:Props) {
           currentSlide={playerDetails.players[2].currentSlide}
           prevSlide={playerDetails.players[2].prevSlide}
           nextSlide={playerDetails.players[2].nextSlide}
+          name1={playerDetails.players[2].name1}
+          name2={playerDetails.players[2].name2}
+          name3={playerDetails.players[2].name3}
+          name4={playerDetails.players[2].name4}
+          name5={playerDetails.players[2].name5}
         />
 
         <Display
@@ -81,6 +96,11 @@ export default function Selector(props:Props) {
           currentSlide={playerDetails.players[3].currentSlide}
           prevSlide={playerDetails.players[3].prevSlide}
           nextSlide={playerDetails.players[3].nextSlide}
+          name1={playerDetails.players[3].name1}
+          name2={playerDetails.players[3].name2}
+          name3={playerDetails.players[3].name3}
+          name4={playerDetails.players[3].name4}
+          name5={playerDetails.players[3].name5}
         />
 
         <Display
@@ -90,6 +110,11 @@ export default function Selector(props:Props) {
           currentSlide={playerDetails.players[4].currentSlide}
           prevSlide={playerDetails.players[4].prevSlide}
           nextSlide={playerDetails.players[4].nextSlide}
+          name1={playerDetails.players[4].name1}
+          name2={playerDetails.players[4].name2}
+          name3={playerDetails.players[4].name3}
+          name4={playerDetails.players[4].name4}
+          name5={playerDetails.players[4].name5}
         />
       </div>
     );

@@ -1,5 +1,4 @@
 export const playerDetails = {
-  'meowSlide': 0,  
   'players': [
       {
           "id": 1,
@@ -16,6 +15,11 @@ export const playerDetails = {
           "rightText": "Nicole Sykes Sentance 1",
           "rightText2": "Nicole Sykes Sentance 2",
           "returnSlide":1,
+          "name1": true,
+          "name2": false,
+          "name3": false,
+          "name4": false,
+          "name5": false,
         },
 
       {
@@ -33,6 +37,11 @@ export const playerDetails = {
         "rightText": "Ellie Off Field",
         "rightText2": "Ellie Off Field Sentance 2",
         "returnSlide":2,
+        "name1": false,
+        "name2": true,
+        "name3": false,
+        "name4": false,
+        "name5": false,
       },
 
       {  
@@ -50,6 +59,11 @@ export const playerDetails = {
         "rightText": "Sam Off Field",
         "rightText2": "Sam Off Field Sentance 2",
         "returnSlide":3,
+        "name1": false,
+        "name2": false,
+        "name3": true,
+        "name4": false,
+        "name5": false,
         },
   
         {
@@ -67,6 +81,11 @@ export const playerDetails = {
           "rightText": "Michelle Off Field",
           "rightText2": "Michelle Off Field Sentance 2",
           "returnSlide":4,
+          "name1": false,
+          "name2": false,
+          "name3": false,
+          "name4": true,
+          "name5": false,
         },
 
         {
@@ -84,5 +103,10 @@ export const playerDetails = {
           "rightText": "Hayley Off Field",
           "rightText2": "Hayley Off Field Sentance 2",
           "returnSlide":5,
+          "name1": false,
+          "name2": false,
+          "name3": false,
+          "name4": false,
+          "name5": true,
         },
 ]}
