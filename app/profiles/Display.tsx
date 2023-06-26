@@ -32,9 +32,10 @@ function Display(props: Props) {
             <div id={"Slide"+props.currentSlide} className='snap-center snap-always scroll-mx-3 flex flex-row'>
                 <div className="relative w-screen h-screen overflow-hidden">
                     
-                 {/* Active Slide Controls and Disp;lay*/}
+                 {/* Active Slide Controls and Disp;lay - Using conditional visitibility */}
                         <span className="inline-grid mx-auto my-4 grid-cols-5 gap-4 text-white font-sans text-xl">
-                        
+                       
+                        {/* If prop.name1/2/3/4/5 = true - Dispay the "active" styling, if name1/2/3/4/5 = fale - Display normal font with hover function... it works :) */}
                         {props.name1 && (
                             <a href="#Slide1" className='font-extrabold underline underline-offset-[6px] decoration-4'>Ash and Nicole</a>
                         )}
@@ -77,9 +78,6 @@ function Display(props: Props) {
                             src="images/SVG/BrushWhite.svg">
                         </img>
                     </div>
-
-                    {/* <a href={props.prevSlide}><img src="/images/arrow.png" id="arrowLeft" className="absolute select-none top-1/2 left-6 md:left-12 xl:left-24 w-12 z-10 h-auto rotate-180"/></a>
-                        <a href={props.nextSlide}><img src="/images/arrow.png" id="arrowRight" className="absolute select-none top-1/2 right-6 md:right-12 xl:right-24 w-12 z-10 h-auto"/></a> */}
             
                     <div className="w-screen top-1/2 right-6 md:right-12 xl:right-24 absolute h-full animateTest">
                         <div id="circle" className="right-[19rem]"><img src="/images/circle.png" className="select-none w-12 z-10 h-auto" /></div>
@@ -89,14 +87,14 @@ function Display(props: Props) {
                         <div id="dashRight" className="right-24"><img src="/images/dash.png" className="select-none  w-12 z-10 h-auto" /></div>
                     </div>
 
-                    <h1 className="font-serif z-10 tracking-wider mt-[8vh] text-6xl md:text-8xl lg:text-9xl text-white">{props.firstName}<span className=''> {props.lastName}</span></h1>
+                    <h1 className="font-serif z-10 tracking-wider mt-[4vh] text-6xl md:text-7xl lg:text-8xl text-white">{props.firstName}<span className=''> {props.lastName}</span></h1>
 
                     <a className='group z-30' href={'/profiles/details#' + (props.firstName) + (props.lastName)}>
                         <div className="max-w-[196px] z-30 mx-auto border-solid border-4 text-white border-white rounded-full px-4 py-3 font-extrabold text-center text-xl font-sans fancyUnderlineCenter">
                             <p className="relative ">Select Player</p>
                         </div>
                     </a>
-                    <div className="w-screen z-0 h-[70vh] md:h-[65vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
+                    <div className="w-screen z-0 h-[50vh] md:h-[55vh] lg:h-[60vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
                 </div>
             </div>
         </>
