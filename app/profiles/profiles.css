@@ -1,3 +1,4 @@
+
 /* Hiding scrollbar for all profile pages */
 main::-webkit-scrollbar{
   display: none !important;
