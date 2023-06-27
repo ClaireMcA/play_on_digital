@@ -7,6 +7,7 @@ import { playerDetails } from '../data';
 interface Props {    
     firstName: string,
     lastName: string,
+    imageName: string,
     leftButton: string,
     rightButton: string,
     leftText: string,
@@ -23,9 +24,9 @@ function LearnMore (props:Props) {
             <div id={props.firstName + props.lastName} className='flex flex-row'>
                 <div className="relative w-screen h-screen overflow-hidden flex mx-auto flex-col items-center text-center">
                 
-
-                     {/* to reflect ALT images, I set grayscale to 0 - put it back to 1 before going to PROD */}
-                    <div className="w-screen z-0 h-[70vh] md:h-[65vh] bottom-0 right-1/4 bg-contain absolute bg-no-repeat bg-bottom grayscale-0" 
+                     <div className="animatedBG z-[0] w-1/2 left-[24.5%] h-[50vh] md:h-[55vh] lg:h-[60vh] bottom-[1%] mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" 
+                        style={{ backgroundImage: `url(/images/profiles/${props.firstName + props.lastName}Alt.png)` }} />
+                    <div className="w-screen z-[2] h-[50vh] md:h-[55vh] lg:h-[60vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" 
                         style={{ backgroundImage: `url(/images/profiles/${props.firstName + props.lastName}Alt.png)` }}>
                     </div>
 
@@ -69,7 +70,7 @@ function LearnMore (props:Props) {
                             
                                 <div className="-transparent relative mx-4 mt-8 text-left rounded-lg bg-white font-sans -translate-y-full scale-75 
                                 scale-y-0 px-4 py-3 opacity-0 transition-all duration-200 peer-checked:relative peer-checked:translate-y-0 peer-checked:scale-100 peer-checked:scale-y-100
-                                peer-checked:opacity-80">
+                                peer-checked:opacity-90">
                                 
                                 
                                     <p className='px-4 py-2 text-darkGrey'>{props.rightText}</p>

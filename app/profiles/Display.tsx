@@ -91,10 +91,10 @@ function Display(props: Props) {
 
                     <a className='group z-30' href={'/profiles/details#' + (props.firstName) + (props.lastName)}>
                         <div className="max-w-[196px] z-30 mx-auto border-solid border-4 text-white border-white rounded-full px-4 py-3 font-extrabold text-center text-xl font-sans fancyUnderlineCenter">
-                            <p className="relative ">Select Player</p>
+                            <p className="relative ">Learn more</p>
                         </div>
                     </a>
-                    <div className="animatedBG z-[0] w-1/2 left-1/4 h-[50vh] md:h-[55vh] lg:h-[60vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
+                    <div className="animatedBG z-[0] w-1/2 left-[24.5%] h-[52vh] md:h-[57vh] lg:h-[62vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
                     <div className="w-screen z-[2] h-[50vh] md:h-[55vh] lg:h-[60vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
 
                 </div>

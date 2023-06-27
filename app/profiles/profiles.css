@@ -1,54 +1,69 @@
 .animatedBG{
   filter: brightness(0) invert(1);
   animation: run linear infinite alternate;
-  animation-duration: 25s;
-  animation-delay: 2s;
+  animation-duration: 50s;
+  animation-delay: 6s;
 }
 @keyframes run {
   0% {
-    left: 25%;
-    bottom: 0%;
+    left: 24.5%;
+    /* bottom: 1%; */
   }
-  15%{
-    left: 21%;
-    bottom: 2%;
+  2.5% {
+    left: 23%;
+    /* bottom: 1%; */
   }
-  25% {
-    left: 25%;
-    bottom: 2%;
+  10%{
+    left: 27%;
+    /* bottom: 1%; */
   }
-  38% {
-    left: 30%;
-    bottom: 2%;
+  17.5%{
+    left: 23%;
+    /* bottom: 1%; */
+  }
+  20%{
+    left: 24.5%;
+    /* bottom: 1%; */
+  }
+  40%{
+    left: 24.5%;
+    /* bottom: 1%; */
+  }
+  42.5% {
+    left: 23%;
+    /* bottom: 1%; */
   }
   50%{
-    left: 28%;
-    bottom: 2%;
+    left: 27%;
+    /* bottom: 1%; */
   }
-  60% {
-    left: 25%;
-    bottom: 0%;
+  57.5%{
+    left: 23%;
+    /* bottom: 1%; */
   }
-  61% {
-    left: 25%;
-    bottom: 0%;
+  60%{
+    left: 24.5%;
+    /* bottom: 1%; */
   }
-  72%{
-    left: 21%;
-    bottom: 0%;
+  80%{
+    left: 24.5%;
+    /* bottom: 1%; */
   }
-  82% {
-    left: 25%;
-    bottom: 0%;
+  82.5% {
+    left: 23%;
+    /* bottom: 1%; */
   }
-  92% {
-    left: 30%;
-    bottom: 0%;
-
+  90%{
+    left: 27%;
+    /* bottom: 1%; */
   }
-  100% {
-    left: 25%;
-    bottom: 0%;
+  97.5%{
+    left: 23%;
+    /* bottom: 1%; */
+  }
+ 100%{
+    left: 24.5%;
+    /* bottom: 1%; */
   }
 }
 
