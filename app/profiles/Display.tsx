@@ -37,38 +37,38 @@ function Display(props: Props) {
                        
                         {/* If prop.name1/2/3/4/5 = true - Dispay the "active" styling, if name1/2/3/4/5 = fale - Display normal font with hover function... it works :) */}
                         {props.name1 && (
-                            <a href="#Slide1" className='font-extrabold underline underline-offset-[6px] decoration-4'>Ash and Nicole</a>
+                            <a href="#Slide1" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[0].firstName}</a>
                         )}
                         {props.name1 === false && (
-                            <a href="#Slide1"className='hover:underline'>Ash and Nicole</a>
+                            <a href="#Slide1"className='hover:underline'>{playerDetails.players[0].firstName}</a>
                         )}
 
                         {props.name2 && (
-                            <a href="#Slide2" className='font-extrabold underline underline-offset-[6px] decoration-4'>Ellie</a>
+                            <a href="#Slide2" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[1].firstName}</a>
                         )}
                         {props.name2 === false && (
-                            <a href="#Slide2" className='hover:underline'>Ellie</a>
+                            <a href="#Slide2" className='hover:underline'>{playerDetails.players[1].firstName}</a>
                         )}
 
                         {props.name3 && (
-                            <a href="#Slide3" className='font-extrabold underline underline-offset-[6px] decoration-4'>Sam</a>
+                            <a href="#Slide3" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[2].firstName}</a>
                         )}
                         {props.name3 === false && (
-                            <a href="#Slide3" className='hover:underline'>Sam</a>
+                            <a href="#Slide3" className='hover:underline'>{playerDetails.players[2].firstName}</a>
                         )}
 
                         {props.name4 && (
-                            <a href="#Slide4" className='font-extrabold underline underline-offset-[6px] decoration-4'>Michelle</a>
+                            <a href="#Slide4" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[3].firstName}</a>
                         )}
                         {props.name4 === false && (
-                            <a href="#Slide4" className='hover:underline'>Michelle</a>
+                            <a href="#Slide4" className='hover:underline'>{playerDetails.players[3].firstName}</a>
                         )}
 
                         {props.name5 && (
-                            <a href="#Slide5"className='font-extrabold underline underline-offset-[6px] decoration-4'>Hayley</a>
+                            <a href="#Slide5"className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[4].firstName}</a>
                         )}
                         {props.name5 === false && (
-                            <a href="#Slide5" className='hover:underline'>Hayley</a>
+                            <a href="#Slide5" className='hover:underline'>{playerDetails.players[4].firstName}</a>
                         )}
 
                     </span>
@@ -94,7 +94,9 @@ function Display(props: Props) {
                             <p className="relative ">Select Player</p>
                         </div>
                     </a>
-                    <div className="w-screen z-0 h-[50vh] md:h-[55vh] lg:h-[60vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
+                    <div className="animatedBG z-[0] w-1/2 left-1/4 h-[50vh] md:h-[55vh] lg:h-[60vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
+                    <div className="w-screen z-[2] h-[50vh] md:h-[55vh] lg:h-[60vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
+
                 </div>
             </div>
         </>
