@@ -14,7 +14,11 @@ interface Props {
     leftText2: string,
     rightText: string,
     rightText2: string,
-    returnSlide: number
+    returnSlide: number,
+    club: string,
+    position: string,
+    jersey: string,
+    retired: boolean,
 }
 
 function LearnMore (props:Props) {
@@ -38,7 +42,15 @@ function LearnMore (props:Props) {
                     </a>
 
                     <h1 className="font-serif tracking-wider font-bold mt-[5vh] text-6xl text-white">{props.firstName + " " + props.lastName}</h1>
-                    <h1 className="title my-4 text-3xl text-white">About me</h1>
+                    <span><h1 className="title my-4 text-3xl text-white">{props.position} - {props.club}</h1>
+                        {props.retired && (
+                                <h1 className="font-serif absolute mt-8 text-7xl left-1/4 w-1/2 text-white">{props.jersey} <span className='text-6xl'>- Retired</span></h1>
+                        )}
+                        {props.retired === false && (
+                            <h1 className="font-serif absolute mt-8 text-7xl left-1/4 w-1/2 text-white">{props.jersey}</h1>
+                            )}
+                    </span>
+                    
 
 
                         {/* Hidden Field Boxes */}
@@ -53,7 +65,7 @@ function LearnMore (props:Props) {
                                 
                                 <div className="-transparent relative mx-4 mt-8 text-left rounded-lg bg-white font-sans -translate-y-full scale-75 
                                 scale-y-0 px-4 py-3 opacity-0 transition-all duration-200 peer-checked:relative peer-checked:translate-y-0 peer-checked:scale-100 peer-checked:scale-y-100
-                                peer-checked:opacity-80">
+                                peer-checked:opacity-90">
                                 
                                     <p className='px-4 py-2 text-darkGrey'>{props.leftText}</p>
                                     <p className='px-4 py-2 text-darkGrey mt-4'>{props.leftText2}</p>
