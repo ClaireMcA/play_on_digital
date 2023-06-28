@@ -1,6 +1,6 @@
 .animatedBG{
   filter: brightness(0) invert(1);
-  animation: run linear infinite forwards;
+  animation: run ease-in infinite forwards;
   animation-duration: 30s;
   animation-delay: 6s;
 }
