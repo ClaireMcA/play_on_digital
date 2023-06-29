@@ -1,64 +1,67 @@
 .animatedBG{
   filter: brightness(0) invert(1);
   animation: run ease-in infinite forwards;
-  animation-duration: 30s;
-  animation-delay: 6s;
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+body{
+  max-height: -webkit-fill-available;
 }
 @keyframes run {
   0% {
-    left: 24.5%;
+    left: 9.5%;
     /* bottom: 1%; */
   }
   10% {
-    left: 23%;
+    left: 8%;
     /* bottom: 1%; */
   }
   20%{
-    left: 27%;
+    left: 11%;
     /* bottom: 1%; */
   }
   30%{
-    left: 24.5%;
+    left: 9.5%;
     /* bottom: 1%; */
   }
   50%{
-    left: 24.5%;
+    left: 9.5%;
     /* bottom: 1%; */
   }
   55% {
-    left: 24.2%;
+    left: 9%;
     /* bottom: 1%; */
   }
   60%{
-    left: 24.8%;
+    left: 10%;
     /* bottom: 1%; */
   }
  65%{
-    left: 24.5%;
+    left: 9.5%;
     /* bottom: 1%; */
   }
   70% {
-    left: 24.8%;
+    left: 8.5%;
     /* bottom: 1%; */
   }
   75%{
-    left: 25.2%;
+    left: 10.5%;
     /* bottom: 1%; */
   }
   80%{
-    left: 24.5%;
+    left: 9.5%;
     /* bottom: 1%; */
   }
   85% {
-    left: 24%;
+    left: 9%;
     /* bottom: 1%; */
   }
   95%{
-    left: 25.5%;
+    left: 10.5%;
     /* bottom: 1%; */
   }
   100%{
-    left: 24.5%;
+    left: 9.5%;
     /* bottom: 1%; */
   }
 }
