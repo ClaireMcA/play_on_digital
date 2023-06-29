@@ -78,14 +78,16 @@ function Display(props: Props) {
                             src="images/SVG/BrushWhite.svg">
                         </img>
                     </div>
-            
+
+                    {/*             
                     <div className="w-screen top-1/2 right-6 md:right-12 xl:right-24 absolute h-full animateTest">
                         <div id="circle" className="right-[19rem]"><img src="/images/circle.png" className="select-none w-12 z-10 h-auto" /></div>
                         <div id="dashFarLeft" className="right-72"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto" /></div>
                         <div id="dashLeft" className="right-56"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto" /></div>
                         <div id="dashMiddle" className="right-40"><img src="/images/dash.png" className="select-none w-12 z-10 h-auto" /></div>
                         <div id="dashRight" className="right-24"><img src="/images/dash.png" className="select-none  w-12 z-10 h-auto" /></div>
-                    </div>
+                    </div> 
+                    */}
 
                     <h1 className="font-serif z-10 tracking-wider mt-[4vh] text-6xl md:text-7xl lg:text-8xl text-white">{props.firstName}<span className=''> {props.lastName}</span></h1>
 
@@ -94,7 +96,10 @@ function Display(props: Props) {
                             <p className="relative ">Learn more</p>
                         </div>
                     </a>
-                    <div className="animatedBG z-[0] w-1/2 left-[24.5%] h-[52vh] md:h-[57vh] lg:h-[62vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
+                    {/* Shadow  */}
+                    <div className="animatedBG z-[0] w-auto left-[24.5%] h-[52vh] md:h-[57vh] lg:h-[62vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
+                   
+                    {/* Image */}
                     <div className="w-screen z-[2] h-[50vh] md:h-[55vh] lg:h-[60vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
 
                 </div>
