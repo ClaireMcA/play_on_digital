@@ -37,38 +37,38 @@ function Display(props: Props) {
                        
                         {/* If prop.name1/2/3/4/5 = true - Dispay the "active" styling, if name1/2/3/4/5 = fale - Display normal font with hover function... it works :) */}
                         {props.name1 && (
-                            <a href="#Slide1" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[0].firstName}</a>
+                            <a href="#Slide1" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[0].lastName}</a>
                         )}
                         {props.name1 === false && (
-                            <a href="#Slide1"className='hover:underline'>{playerDetails.players[0].firstName}</a>
+                            <a href="#Slide1"className='font-extrabold underline-offset-[6px] decoration-4 hover:underline'>{playerDetails.players[0].lastName}</a>
                         )}
 
                         {props.name2 && (
-                            <a href="#Slide2" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[1].firstName}</a>
+                            <a href="#Slide2" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[1].lastName}</a>
                         )}
                         {props.name2 === false && (
-                            <a href="#Slide2" className='hover:underline'>{playerDetails.players[1].firstName}</a>
+                            <a href="#Slide2" className='font-extrabold underline-offset-[6px] decoration-4 hover:underline'>{playerDetails.players[1].lastName}</a>
                         )}
 
                         {props.name3 && (
-                            <a href="#Slide3" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[2].firstName}</a>
+                            <a href="#Slide3" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[2].lastName}</a>
                         )}
                         {props.name3 === false && (
-                            <a href="#Slide3" className='hover:underline'>{playerDetails.players[2].firstName}</a>
+                            <a href="#Slide3" className='font-extrabold underline-offset-[6px] decoration-4 hover:underline'>{playerDetails.players[2].lastName}</a>
                         )}
 
                         {props.name4 && (
-                            <a href="#Slide4" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[3].firstName}</a>
+                            <a href="#Slide4" className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[3].lastName}</a>
                         )}
                         {props.name4 === false && (
-                            <a href="#Slide4" className='hover:underline'>{playerDetails.players[3].firstName}</a>
+                            <a href="#Slide4" className='font-extrabold underline-offset-[6px] decoration-4 hover:underline'>{playerDetails.players[3].lastName}</a>
                         )}
 
                         {props.name5 && (
-                            <a href="#Slide5"className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[4].firstName}</a>
+                            <a href="#Slide5"className='font-extrabold underline underline-offset-[6px] decoration-4'>{playerDetails.players[4].lastName}</a>
                         )}
                         {props.name5 === false && (
-                            <a href="#Slide5" className='hover:underline'>{playerDetails.players[4].firstName}</a>
+                            <a href="#Slide5" className='font-extrabold underline-offset-[6px] decoration-4 hover:underline'>{playerDetails.players[4].lastName}</a>
                         )}
 
                     </span>
