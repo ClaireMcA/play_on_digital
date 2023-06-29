@@ -1,11 +1,16 @@
 .animatedBG{
   filter: brightness(0) invert(1);
   animation: run ease-in infinite forwards;
-  animation-duration: 10s;
-  animation-delay: 0s;
+  animation-duration: 30s;
+  animation-delay: 6s;
 }
-body{
-  max-height: -webkit-fill-available;
+.fullscreen{
+  min-height: -webkit-fill-available !important;
+  max-height: -webkit-fill-available !important;
+  height: -webkit-fill-available !important;
+  min-width: -webkit-fill-available !important;
+  max-width: -webkit-fill-available !important;
+  width: -webkit-fill-available !important;
 }
 @keyframes run {
   0% {

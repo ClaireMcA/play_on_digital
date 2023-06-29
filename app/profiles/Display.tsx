@@ -29,7 +29,7 @@ function Display(props: Props) {
         <>
             
             
-            <div id={"Slide"+props.currentSlide} className='snap-center snap-always scroll-mx-3 flex flex-row'>
+            <div id={"Slide"+props.currentSlide} className='fullscreen snap-center snap-always scroll-mx-3 flex flex-row'>
                 <div className="relative w-screen h-screen overflow-hidden">
                     
                  {/* Active Slide Controls and Disp;lay - Using conditional visitibility */}
@@ -97,7 +97,7 @@ function Display(props: Props) {
                         </div>
                     </a>
                     {/* Shadow  */}
-                    <div className="animatedBG w-[80%] left-[9.5%] h-[52vh] md:h-[57vh] lg:h-[62vh] bottom-0 bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
+                    <div className="animatedBG w-[80%] left-[9.5%] h-[51vh] md:h-[56vh] lg:h-[61vh] bottom-0 bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
                    
                     {/* Image */}
                     <div className="w-screen z-[2] h-[50vh] md:h-[55vh] lg:h-[60vh] bottom-0 mx-auto bg-contain absolute bg-no-repeat bg-bottom grayscale" style={{ backgroundImage: `url(/images/profiles/${props.imageName}.png)` }} />
