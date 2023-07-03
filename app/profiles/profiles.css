@@ -6,11 +6,6 @@
 }
 .fullscreen{
   min-height: -webkit-fill-available !important;
-  max-height: -webkit-fill-available !important;
-  height: -webkit-fill-available !important;
-  min-width: -webkit-fill-available !important;
-  max-width: -webkit-fill-available !important;
-  width: -webkit-fill-available !important;
 }
 @keyframes run {
   0% {
