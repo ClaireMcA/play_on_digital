@@ -14,37 +14,37 @@ export default function Grid(props:Props) {
             <Tile 
             onClick = {() => props.onClick(1)}
             imgNum = {1}
-            title = {"Interview One"}
-            subtitle = {"Very Good FC"}
+            title = {"Jessica Nash"}
+            subtitle = {"Canberra United FC"}
             />
             <Tile 
             onClick={() => props.onClick(2)}      
             imgNum={2}
-            title={"Interview Two"}
-            subtitle={"Goaaaaaal United FC"}   
+            title={"Michelle Heyman"}
+            subtitle = {"Canberra United FC"}
             />
             <Tile 
             onClick={() => props.onClick(3)}      
             imgNum = {3} 
-            title = {"Interview Three"}
+            title={"Michelle Heyman"}
             subtitle = {"Canberra United FC"}
             />
             <Tile 
             onClick={() => props.onClick(4)}      
             imgNum = {4} 
-            title = {"Interview Four"}
-            subtitle = {"Very Good FC"}
+            title={"Michelle Heyman"}
+            subtitle = {"Canberra United FC"}
             />
             <Tile 
             onClick={() => props.onClick(5)}      
             imgNum = {5} 
-            title = {"Interview Five"}
-            subtitle = {"Goaaaaaal United FC"}
+            title = {"2020/21 Season Finals Preview"}
+            subtitle = {"Canberra United FC"}
             />
             <Tile 
             onClick={() => props.onClick(6)}      
             imgNum = {6} 
-            title = {"Interview Six"}
+            title = {"Grace Maher and Nikoletta Flannery"}
             subtitle = {"Canberra United FC"}
             />
             <Tile 
