@@ -14,8 +14,8 @@ export default function Grid(props:Props) {
             <Tile 
             onClick = {() => props.onClick(1)}
             imgNum = {1}
-            title = {"Jessica Nash"}
-            subtitle = {"Canberra United FC"}
+            title = {"Jessika Nash"}
+            subtitle = {"Future Stars - 2021"}
             />
             <Tile 
             onClick={() => props.onClick(2)}      
@@ -27,13 +27,13 @@ export default function Grid(props:Props) {
             onClick={() => props.onClick(3)}      
             imgNum = {3} 
             title={"Michelle Heyman"}
-            subtitle = {"Canberra United FC"}
+            subtitle = {"Retirement and Returning to Football"}
             />
             <Tile 
             onClick={() => props.onClick(4)}      
             imgNum = {4} 
             title={"Michelle Heyman"}
-            subtitle = {"Canberra United FC"}
+            subtitle = {"Goal Scoring Legend"}
             />
             <Tile 
             onClick={() => props.onClick(5)}      
@@ -50,20 +50,20 @@ export default function Grid(props:Props) {
             <Tile 
             onClick={() => props.onClick(7)}      
             imgNum = {7} 
-            title = {"Interview Seven"}
-            subtitle = {"Very Good FC"}
+            title = {"Behind the Scenes"}
+            subtitle = {"W-League TV Ad - 2012"}
             />
             <Tile 
             onClick={() => props.onClick(8)}      
             imgNum = {8} 
-            title = {"Interview Eight"}
-            subtitle = {"Goaaaaaal United FC"}
+            title = {"Michelle Heyman"}
+            subtitle = {"Breaking Down Barriers"}
             />
             <Tile 
             onClick={() => props.onClick(9)}      
             imgNum = {9} 
-            title = {"Interview Nine"}
-            subtitle = {"Canberra United FC"}
+            title = {"Sam Kerr"}
+            subtitle = {"Big Questions with Marnie the MiniRoo"}
             />
         </div>
 
