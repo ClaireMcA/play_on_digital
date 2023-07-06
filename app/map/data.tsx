@@ -42,7 +42,7 @@ export const placePoints = {
         },
         "geometry": {
             "type": "Point",
-            "coordinates": [149.084190, -35.214911]
+            "coordinates": [149.084090, -35.214865]
         }
     },
     {
@@ -210,7 +210,7 @@ export const placePoints = {
         },
         "geometry": {
             "type": "Point",
-            "coordinates": [149.084343, -35.214451]
+            "coordinates": [149.085213, -35.214051]
         }
     },
     {

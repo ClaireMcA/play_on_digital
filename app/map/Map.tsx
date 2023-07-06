@@ -1,17 +1,18 @@
 import React, {useRef, useState} from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 // import mapboxgl from "mapbox-gl";
-import ReactMapGL, { Marker, MapLayerMouseEvent, MapRef, MapboxStyle, ViewStateChangeEvent } from 'react-map-gl';
+import ReactMapGL, { Marker, MapLayerMouseEvent, MapRef, MapboxStyle, ViewStateChangeEvent, MapboxGeoJSONFeature } from 'react-map-gl';
 import { placePoints } from './data';
 import bbox from '@turf/bbox';
 import MAP_STYLE from './mapStyle';
 
 interface Props {
   clubClicked: any
+  currentClub: number[][]
 }
 
 
-export default function MapView({ clubClicked }: Props) {
+export default function MapView({ clubClicked, currentClub }: Props) {
   
   const [viewState, setViewState] = React.useState({
     longitude: 149.1079,
@@ -24,15 +25,14 @@ export default function MapView({ clubClicked }: Props) {
   const [iconSize, setIconSize] = useState(10);
   var iconFormat: string = "h-" + iconSize + " w-" + iconSize;
   // console.log(iconFormat);
-  console.log()
 
   const handleMove = (e: ViewStateChangeEvent) => {
     setViewState(e.viewState);
     
     
     const zoom = e.viewState.zoom;
-    console.log(zoom);
-    console.log(iconSize);
+    // console.log(zoom);
+    // console.log(iconSize);
     
     if (zoom < 10)      setIconSize(10);
     else if (zoom < 11) setIconSize(12);
@@ -44,8 +44,26 @@ export default function MapView({ clubClicked }: Props) {
     else if (zoom < 17) setIconSize(48);
     // else setIconSize(8);
     
-
+    
   }
+
+
+  // const onClick = (coo: Array<Array<number>>) => {
+  //   const test = bbox(coo);
+  //   console.log(coo)
+  //   console.log(test)
+
+  //   if (!mapRef.current) return;
+  //   mapRef.current.fitBounds(
+  //     [
+  //       [test[0], test[1]],
+  //       [test[2], test[3]]
+  //     ],
+  //     {padding: 40, duration: 500}
+  //   );
+
+
+  // }
 
   const onClick = (e: MapLayerMouseEvent) => {
     if (e.features == undefined) return;
@@ -58,6 +76,9 @@ export default function MapView({ clubClicked }: Props) {
     if (feature) {
       // calculate the bounding box of the feature
       const [minLng, minLat, maxLng, maxLat] = bbox(feature);
+      const test = bbox(feature);
+
+      console.log({test})
 
       if (!mapRef.current) return;
       mapRef.current.fitBounds(
@@ -65,7 +86,7 @@ export default function MapView({ clubClicked }: Props) {
           [minLng, minLat],
           [maxLng, maxLat]
         ],
-        {padding: 40, duration: 1000}
+        {padding: 40, duration: 500}
       );
     }
   };
@@ -89,6 +110,7 @@ export default function MapView({ clubClicked }: Props) {
         onClick={(e: MapLayerMouseEvent) => {
           clubClicked(e);
           onClick(e)
+          // onClick(currentClub)
         }}
         mapStyle={MAP_STYLE as MapboxStyle}
       >

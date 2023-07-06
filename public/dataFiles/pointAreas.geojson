@@ -6,7 +6,7 @@
       "type": "Feature",
       "properties": {
         "name": "ADFA Vikings Football Club",
-        "color": "#3288bd",
+        "color": "#22255A",
         "clubId": 1
       },
       "geometry": {
@@ -100,7 +100,7 @@
       "type": "Feature",
       "properties": {
         "name": "ANU Women's Football Club",
-        "color": "#66c2a5",
+        "color": "#157dc6",
         "clubId": 2
       },
       "geometry": {
@@ -193,7 +193,7 @@
       "type": "Feature",
       "properties": {
         "name": "Belconnen United Football Club",
-        "color": "#abdda4",
+        "color": "#144276",
         "clubId": 3
       },
       "geometry": {
@@ -321,7 +321,7 @@
       "type": "Feature",
       "properties": {
         "name": "BellaMonaro Woman's Football Club",
-        "color": "#3288bd",
+        "color": "#0e5000",
         "clubId": 4
       },
       "geometry": {
@@ -387,7 +387,7 @@
       "type": "Feature",
       "properties": {
         "name": "Belnorth Football Club",
-        "color": "#66c2a5",
+        "color": "#f3d03e",
         "clubId": 5
       },
       "geometry": {
@@ -467,7 +467,7 @@
       "type": "Feature",
       "properties": {
         "name": "Belsouth Football Club",
-        "color": "#abdda4",
+        "color": "#128fc7",
         "clubId": 6
       },
       "geometry": {
@@ -581,7 +581,7 @@
       "type": "Feature",
       "properties": {
         "name": "Belwest Foxes Football Club",
-        "color": "#3288bd",
+        "color": "#E41333",
         "clubId": 7
       },
       "geometry": {
@@ -716,7 +716,7 @@
       "type": "Feature",
       "properties": {
         "name": "Brindabella Blues Football Club",
-        "color": "#66c2a5",
+        "color": "#384772",
         "clubId": 8
       },
       "geometry": {
@@ -881,7 +881,7 @@
       "type": "Feature",
       "properties": {
         "name": "Burgmann Anglican School Football Club",
-        "color": "#abdda4",
+        "color": "#00275d",
         "clubId": 9
       },
       "geometry": {
@@ -1037,7 +1037,7 @@
       "type": "Feature",
       "properties": {
         "name": "Burns Football Club",
-        "color": "#3288bd",
+        "color": "#014A7C",
         "clubId": 10
       },
       "geometry": {
@@ -1130,13 +1130,49 @@
       "type": "Feature",
       "properties": {
         "name": "Canberra Croatia Football Club",
-        "color": "#3288bd",
+        "color": "#1B1495",
         "clubId": 11
       },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
           [
+            [149.119254, -35.308398],
+            [149.119451, -35.309361],
+            [149.107223, -35.312262],
+            [149.107599, -35.313255],
+            [149.108305, -35.314642],
+            [149.109077, -35.315777],
+            [149.110167, -35.317069],
+            [149.110679, -35.317739],
+            [149.111142, -35.318042],
+            [149.112056, -35.31883],
+            [149.112447, -35.319069],
+            [149.112734, -35.319135],
+            [149.113696, -35.319213],
+            [149.11415, -35.319338],
+            [149.114392, -35.319474],
+            [149.11323, -35.320779],
+            [149.110735, -35.320859],
+            [149.110791, -35.322048],
+            [149.109977, -35.322529],
+            [149.109949, -35.322547],
+            [149.109935, -35.322556],
+            [149.109483, -35.323257],
+            [149.109377, -35.324091],
+            [149.109138, -35.32523],
+            [149.108838, -35.325699],
+            [149.108178, -35.325942],
+            [149.107024, -35.325844],
+            [149.106444, -35.3259],
+            [149.10498, -35.326768],
+            [149.10217, -35.328106],
+            [149.102098, -35.32814],
+            [149.101459, -35.328288],
+            [149.100861, -35.328187],
+            [149.100165, -35.32768],
+            [149.088105, -35.32668],
+            [149.087237, -35.326386],
             [149.091187, -35.315198],
             [149.092004, -35.312883],
             [149.089714, -35.312334],
@@ -1340,43 +1376,7 @@
             [149.120003, -35.305968],
             [149.119497, -35.306875],
             [149.119315, -35.307493],
-            [149.119254, -35.308398],
-            [149.119451, -35.309361],
-            [149.107223, -35.312262],
-            [149.107599, -35.313255],
-            [149.108305, -35.314642],
-            [149.109077, -35.315777],
-            [149.110167, -35.317069],
-            [149.110679, -35.317739],
-            [149.111142, -35.318042],
-            [149.112056, -35.31883],
-            [149.112447, -35.319069],
-            [149.112734, -35.319135],
-            [149.113696, -35.319213],
-            [149.11415, -35.319338],
-            [149.114392, -35.319474],
-            [149.11323, -35.320779],
-            [149.110735, -35.320859],
-            [149.110791, -35.322048],
-            [149.109977, -35.322529],
-            [149.109949, -35.322547],
-            [149.109935, -35.322556],
-            [149.109483, -35.323257],
-            [149.109377, -35.324091],
-            [149.109138, -35.32523],
-            [149.108838, -35.325699],
-            [149.108178, -35.325942],
-            [149.107024, -35.325844],
-            [149.106444, -35.3259],
-            [149.10498, -35.326768],
-            [149.10217, -35.328106],
-            [149.102098, -35.32814],
-            [149.101459, -35.328288],
-            [149.100861, -35.328187],
-            [149.100165, -35.32768],
-            [149.088105, -35.32668],
-            [149.087237, -35.326386],
-            [149.091187, -35.315198]
+            [149.119254, -35.308398]
           ]
         ]
       }
@@ -1386,7 +1386,7 @@
       "type": "Feature",
       "properties": {
         "name": "Canberra Girls Grammar Football Club",
-        "color": "#66c2a5",
+        "color": "#0d5257",
         "clubId": 12
       },
       "geometry": {
@@ -1492,7 +1492,7 @@
       "type": "Feature",
       "properties": {
         "name": "Canberra Grammar School Football Club",
-        "color": "#abdda4",
+        "color": "#62baed",
         "clubId": 13
       },
       "geometry": {
@@ -1719,7 +1719,7 @@
       "type": "Feature",
       "properties": {
         "name": "Canberra Olympic Football Club",
-        "color": "#3288bd",
+        "color": "#2454a6",
         "clubId": 14
       },
       "geometry": {
@@ -1794,7 +1794,7 @@
       "type": "Feature",
       "properties": {
         "name": "Canberra United Academy Football Club",
-        "color": "#66c2a5",
+        "color": "#94c744",
         "clubId": 15
       },
       "geometry": {
@@ -1894,7 +1894,7 @@
       "type": "Feature",
       "properties": {
         "name": "Canberra White Eagles Football Club",
-        "color": "#abdda4",
+        "color": "#FE0002",
         "clubId": 16
       },
       "geometry": {
@@ -2683,7 +2683,7 @@
       "type": "Feature",
       "properties": {
         "name": "Gungahlin United Football Club",
-        "color": "#3288bd",
+        "color": "#DE9FCF",
         "clubId": 17
       },
       "geometry": {
@@ -2851,7 +2851,7 @@
       "type": "Feature",
       "properties": {
         "name": "Lanyon United Football Club",
-        "color": "#66c2a5",
+        "color": "#F79019",
         "clubId": 18
       },
       "geometry": {
@@ -3039,7 +3039,7 @@
       "type": "Feature",
       "properties": {
         "name": "Majura Football Club",
-        "color": "#abdda4",
+        "color": "#2D67B1",
         "clubId": 19
       },
       "geometry": {
@@ -3133,7 +3133,7 @@
       "type": "Feature",
       "properties": {
         "name": "Monaro Panthers Football Club",
-        "color": "#3288bd",
+        "color": "#06693A",
         "clubId": 20
       },
       "geometry": {
@@ -3188,7 +3188,7 @@
       "type": "Feature",
       "properties": {
         "name": "O'Connor Kinghts Football Club",
-        "color": "#3288bd",
+        "color": "#BE2B1E",
         "clubId": 21
       },
       "geometry": {
@@ -3262,7 +3262,7 @@
       "type": "Feature",
       "properties": {
         "name": "Queanbeyan City Football Club",
-        "color": "#66c2a5",
+        "color": "#EB3136",
         "clubId": 22
       },
       "geometry": {
@@ -3317,7 +3317,7 @@
       "type": "Feature",
       "properties": {
         "name": "Radford College Football Club",
-        "color": "#abdda4",
+        "color": "#7E3547",
         "clubId": 23
       },
       "geometry": {
@@ -3558,7 +3558,7 @@
       "type": "Feature",
       "properties": {
         "name": "South Canberra Football Club",
-        "color": "#3288bd",
+        "color": "#8CD1D8",
         "clubId": 24
       },
       "geometry": {
@@ -3776,7 +3776,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tuggeranong United Football Club",
-        "color": "#66c2a5",
+        "color": "#FFF200",
         "clubId": 25
       },
       "geometry": {
@@ -3876,7 +3876,7 @@
       "type": "Feature",
       "properties": {
         "name": "UC Stars Football Club",
-        "color": "#abdda4",
+        "color": "#04A8D0",
         "clubId": 26
       },
       "geometry": {
@@ -3990,7 +3990,7 @@
       "type": "Feature",
       "properties": {
         "name": "West Canberra Wanderers Football Club",
-        "color": "#3288bd",
+        "color": "#B61E3F",
         "clubId": 27
       },
       "geometry": {
@@ -4257,7 +4257,7 @@
       "type": "Feature",
       "properties": {
         "name": "Weston Molonglo Football Club",
-        "color": "#66c2a5",
+        "color": "#86888A",
         "clubId": 28
       },
       "geometry": {
@@ -5139,7 +5139,7 @@
       "type": "Feature",
       "properties": {
         "name": "Woden Valley Soccer Club",
-        "color": "#abdda4",
+        "color": "#DA1D43",
         "clubId": 29
       },
       "geometry": {

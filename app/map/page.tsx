@@ -3,7 +3,6 @@
 import { useState } from "react";
 import MapView from "./Map"
 import SideBar from "./SideBar";
-import Club from "./Club";
 import { placePoints } from './data';
 import { MapLayerMouseEvent, MapRef } from 'react-map-gl';
 import bbox from '@turf/bbox';
@@ -46,8 +45,13 @@ export default function MapPage() {
 
   return (
     <main className="items-start bgDarkGrey max-w-full w-screen grid grid-rows-2 grid-cols-1 sm:grid-rows-1 sm:grid-cols-[2fr_1fr]">
-      <MapView clubClicked={(e: MapLayerMouseEvent) => handleClick(e)}/>
-      <Club
+      <MapView 
+        clubClicked={
+          (e: MapLayerMouseEvent) => handleClick(e)
+        }
+        currentClub={currentClub}
+      />
+      <SideBar
         club = {currentClub.properties.club}
         field = {currentClub.properties.ground}
         desc = { currentClub.properties.desc}
