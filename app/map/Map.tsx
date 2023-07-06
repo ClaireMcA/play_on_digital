@@ -37,8 +37,8 @@ export default function MapView({ clubClicked, currentClub }: Props) {
     if (zoom < 10)      setIconSize(10);
     else if (zoom < 11) setIconSize(12);
     else if (zoom < 12) setIconSize(14);
-    else if (zoom < 13) setIconSize(36);
-    else if (zoom < 14) setIconSize(36);
+    else if (zoom < 13) setIconSize(14);
+    else if (zoom < 14) setIconSize(40);
     else if (zoom < 15) setIconSize(40);
     else if (zoom < 16) setIconSize(40);
     else if (zoom < 17) setIconSize(48);
