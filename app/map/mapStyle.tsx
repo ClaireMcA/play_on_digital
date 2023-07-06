@@ -14,7 +14,14 @@ const fillLayer: FillLayer = {
   paint: {
     'fill-color': ['get', 'color'],
     // 'fill-color': '#4E3FC8',
-    'fill-opacity': 0.4
+    // 'fill-opacity': 0.7
+    'fill-opacity': [
+      'step', 
+      ['zoom'], //input 0
+      0.8, // output 0
+      12, 0.6,
+      13, 0.4 // input1, output1
+    ]
   },
 };
 
