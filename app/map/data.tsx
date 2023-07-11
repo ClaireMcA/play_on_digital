@@ -220,7 +220,7 @@ export const placePoints = {
             "club": "Canberra White Eagles Football Club",
             "ground": "Woden Park, Phillip",
             "desc": "",
-            "logoImg": "canberraWhiteEagles.png"
+            "logoImg": "CanberraWhiteEagles.png"
         },
         "geometry": {
             "type": "Point",

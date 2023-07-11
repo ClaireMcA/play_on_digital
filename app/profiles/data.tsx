@@ -121,7 +121,7 @@ export const playerDetails = {
           "leftText2": "She received a call-up to the Matildas in 2009 and made an international debut in a friendly match against Italy. She made her second cap with the Matildas in 2012 in an international friendly match against New Zealand.",
           "rightButton":"Leadership",
           "rightText": "Brush's journey with Canberra United began in the team's inaugural season in 2008 when she was appointed captain and led the squad to the final. She later shared the captaincy with Lydia Williams in the 2009 season before assuming sole leadership, guiding the team to success in subsequent campaigns.",
-          "rightText2": "Under her captaincy, Canberra United secured the A-League Women, then known as the W-League, premiership in 2011.",
+          "rightText2": "Under her captaincy, Canberra United secured the W-League premiership in 2011.",
           "returnSlide":5,
           "name1": false,
           "name2": false,
