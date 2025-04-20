@@ -12,10 +12,10 @@ export default function MapPage() {
   const defaultFeature = {
     type: 'point',
     properties: {
-        club: 'Select a Club',
+        club: 'Map of Womens Football Clubs in Canberra',
         field: '',
-        desc: '',
-        logoImg: 'belwest.png'
+        desc: 'Select a club on the map to see details',
+        logoImg: ''
     },
     geometry: {
         coordinates: [],
