@@ -1,40 +1,66 @@
-import Image from 'next/image'
-import Option from './Option'
+'use client';
 
-export default function Home() {
+import { useState } from "react";
+import MapView from "./Map"
+import SideBar from "./SideBar";
+import { placePoints } from './data';
+import { MapLayerMouseEvent, MapRef } from 'react-map-gl';
+import bbox from '@turf/bbox';
+
+export default function MapPage() {
+
+  const defaultFeature = {
+    type: 'point',
+    properties: {
+        club: 'Map of Womens Football Clubs in Canberra',
+        field: '',
+        desc: 'Select a club on the map to see details',
+        logoImg: ''
+    },
+    geometry: {
+        coordinates: [],
+        type: 'string'
+    }
+  }
+
+  const [currentClub, setcurrentClub]: null | any = useState(defaultFeature);
+  // console.log(currentClub)
+
+
+  const handleClick = (e: MapLayerMouseEvent) => {
+   
+    if (e.features == undefined) return;
+    if (e.features[0] == undefined) return;
+    if (e.features[0].properties == undefined) return;
+    const id = e.features[0].properties.clubId;
+
+    setcurrentClub(placePoints.features[id - 1]);
+    console.log(currentClub.properties.club);
+
+  }
+
+
+
 
 
   return (
-    <main className="items-center bgDarkGrey">
-        <div className="p-6 container h-screen max-w-full w-screen grid grid-rows-4 grid-cols-1 sm:grid-rows-3 sm:grid-cols-2 gap-6">
-          <div className='col-span-2 bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(/images/branding/Logo-PlayOn-Grey.png)` }}>
-
-          </div>
-          <Option 
-            link = "/map"
-            imgNum = {1}
-            title = {"Interactive Map"}
-            subtitle = {"Take a look at womens football clubs in Canberra!"}
-          />
-          <Option 
-            link = "/profiles"
-            imgNum = {1}
-            title = {"Player Profiles"}
-            subtitle = {"Find out more about some important Aussie Players!"}
-          />
-          <Option 
-            link = "https://playonexhibition.netlify.app/profiles.html"
-            imgNum = {1}
-            title = {"Timeline"}
-            subtitle = {"Explore womens football clubs in Canberra through the years!"}
-          />
-          <Option 
-            link = "/tiles"
-            imgNum = {1}
-            title = {"Video Tiles"}
-            subtitle = {"Flick through some selfie videos"}
-          />
-        </div>
+    <main className="items-start bgDarkGrey max-w-full w-screen grid grid-rows-2 grid-cols-1 sm:grid-rows-1 sm:grid-cols-[2fr_1fr]">
+      <MapView 
+        clubClicked={
+          (e: MapLayerMouseEvent) => handleClick(e)
+        }
+        currentClub={currentClub}
+      />
+      <SideBar
+        club = {currentClub.properties.club}
+        field = {currentClub.properties.ground}
+        desc = { currentClub.properties.desc}
+        img = {currentClub.properties.logoImg}
+        // club = "Belwest"
+        // ground = {"Latham Playing Fields"}
+        // desc = "This si teh belwest club and a few details about them."
+        // img = "belwest.png"
+      />
     </main>
   )
 }
